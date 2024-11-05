@@ -15,18 +15,18 @@ button{
   cursor: pointer;
   padding: 11px 23px;
 }
-
 /*--------------------------------------------*/
-header{
+header, footer{
   width: 100vw;
   height: 100%;
   background-color: #111;
 }
-header > .container{
+header > .container,
+footer > .container{
   width: 1700px;
   margin: 0 auto;
 }
-
+/*--------------------------------------------*/
 /*배경이미지*/
 header .main-bgImg{
   width: 100%;
@@ -50,7 +50,6 @@ header .main-bgImg{
 /*요소 공중에 띄워서 양끝에 배치*/
 .topMenu > ul{
   display: flex;
-  border: 1px solid blue;
   position: absolute;
 }
 .topMenu > ul:nth-of-type(1){
@@ -68,6 +67,13 @@ header .main-bgImg{
 }
 .topMenu > ul > li:hover{
   color: #fff;
+}
+
+/*로고 이미지*/
+.logo > img{
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
 }
 
 /*배경 이미지 위에 띄우는 텍스트 요소*/
@@ -110,17 +116,24 @@ header .main-bgImg{
   z-index: 10;
   cursor: pointer;
 }
+/*첫번재 li요소만 색상 변경 -> 현재 선택되었다는 의미*/
 .topMenu-btn > ul > li:nth-of-type(1){
   background-color: #333;
   color: #fff;
 }
+
+/*마우스이벤트 효과*/
+.topMenu-btn > ul > li:nth-of-type(2):hover,
+.topMenu-btn > ul > li:nth-of-type(3):hover{
+  background-color: #eee;
+}
 /*--------------------------------------------*/
 /*Our-Recommendations 영역*/
-.Our-Recommendations{}
 .Our-Recommendations > h2{
   color: #fff;
   font-size: 30px;
-  margin: 15px;
+  margin-top: 60px;
+  margin-bottom: 5px;
 }
 .Our-Re{
   width: 100%;
@@ -132,24 +145,34 @@ header .main-bgImg{
   border: 1px solid #ccc;
   width: 1100px;
   height: 860px;
-  margin: 10px 20px;
+  margin: 10px 20px 10px 0;
   transition: all .5s;
   color: #fff;
+  overflow: hidden;
 }
 .Our-Re > .el1 > img{
   width: 1095px;
   height: 600px;
+  transition: all .5s;
   /*이미지 밑으로 갈수록 점점 흐리게 효과넣기*/
 }
 .Our-Re > .el2{
   border: 1px solid #ccc;
   width: 560px;
-  background: url(../image/benz_logoImg.avif) center/cover;
+  height: 860px;
   z-index: 50;
-  margin: 10px 20px;
+  margin: 10px 0 10px 20px;
   color: #fff;
   transition: all .5s;
   position: relative;
+  overflow: hidden;
+}
+.Our-Re > .el2 > img{
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+  overflow: hidden;
+  object-fit: cover;
 }
 .Our-Re > .el2 > p{
   position: absolute;
@@ -163,8 +186,8 @@ header .main-bgImg{
   left: 10%;
 }
 /*마우스이벤트*/
-.Our-Re > .el1:hover,
-.Our-Re > .el2:hover{
+.Our-Re > .el1 > img:hover,
+.Our-Re > .el2 > img:hover{
   transform: scale(1.05);
 }
 
@@ -187,4 +210,176 @@ header .main-bgImg{
   background-color: transparent;
   text-decoration: underline;
   font-size: 18px;
+}
+/*--------------------------------------------*/
+/*Service 영역*/
+.Service{
+  margin-top: 50px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+.service-All{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.service-box{
+  border: 1px solid #ccc;
+  width: 530px;
+  height: 800px;
+  margin-right: 60px;
+  position: relative;
+  overflow: hidden;
+}
+.service-box:last-child{
+  margin: 0;
+}
+.ser-img1{
+  background: url(../image/benz_img1.avif) center/cover;
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+  overflow: hidden;
+  
+}
+.ser-img2{
+  background: url(../image/benz_img2.avif) center/cover;
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+  overflow: hidden;
+}
+.ser-img3{
+  background: url(../image/benz_img3.avif) center/cover;
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+  overflow: hidden;
+}
+
+/*마우스이벤트*/
+.ser-img1:hover,
+.ser-img2:hover,
+.ser-img3:hover{
+  transform: scale(1.05);
+}
+
+
+.gradient{
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  background: linear-gradient(
+      to bottom,
+
+      rgba(0, 0, 0, 0) 10%,
+      rgba(0, 0, 0, 0.25) 20%,
+      rgba(0, 0, 0, 0.5) 30%,
+      rgba(0, 0, 0, 0.66) 40%,
+      rgba(0, 0, 0, 0.99) 60%,
+      rgba(0, 0, 0, 1) 100%
+      /* rgba(0, 0, 0, 0) 10%,
+      rgba(0, 0, 0, 0.25) 25%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.75) 75%,
+      rgba(0, 0, 0, 1) 100% */
+    );
+}
+.ser-txt{
+  width: 90%;
+  height: auto;
+  position: absolute;
+  bottom: 80px;
+  left: 40px;
+  z-index: 20;
+  color: #fff;
+}
+.ser-txt > b{
+  display: block;
+  font-size: 30px;
+  margin: 25px 0;
+}
+.service-box:nth-of-type(2) > .ser-txt > .ser-btn{
+  text-align: left;
+}
+.service-box:nth-of-type(2) > .ser-txt > .ser-btn > button{
+  display: inline;
+}
+.service-box:nth-of-type(2) > .ser-txt > .ser-btn > button:nth-of-type(2){
+  background-color: transparent;
+  text-decoration: underline;
+  margin: 0px 15px;
+  font-size: 17px;
+  padding: 0;
+}
+/*--------------------------------------------*/
+/*Our_Models 영역*/
+/*--------------------------------------------*/
+/*footer*/
+footer{
+  color: #fff;
+}
+
+.footer{
+  width: 100%;
+  height: 100%;
+  border: 5px solid red;
+}
+
+/*영역이 슬라이드 되었을때 최상단으로 이동하는 버튼*/
+.Topmove-button{
+  text-align: center;
+  margin-top: 60px;
+}
+.Topmove-button > b{
+  display: block;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/*회원가입 안내 영역*/
+.signUp{
+  width: 100%;
+  height: 150px;
+  border: 1px solid #ccc;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+.signUp-btn > button{
+  width: 400px;
+  height: 60px;
+  font-size: 17px;
+}
+
+/**/
+.Other-services{
+  margin-top: 70px;
+}
+/*ul*/
+.Other-services > .other{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+/*li*/
+.Other-services > .other >.other-menu{
+  width: 250px;
+  border: 1px solid yellow;
+  margin-right: 40px;
+}
+/*마지작 li요소 여백 제거*/
+.Other-services > .other > .other-menu:last-child{
+  margin: 0;
+}
+.Other-services > .other >.other-menu button{
+  background-color: transparent;
+  padding: 0;
 }
