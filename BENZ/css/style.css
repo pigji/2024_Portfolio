@@ -1,0 +1,190 @@
+/*폰트*/
+
+/*초기화*/
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+button{
+  border: 0; 
+  outline: 0; 
+  background-color: transparent;
+  display: block;
+  background-color: #0078b6;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 11px 23px;
+}
+
+/*--------------------------------------------*/
+header{
+  width: 100vw;
+  height: 100%;
+  background-color: #111;
+}
+header > .container{
+  width: 1700px;
+  margin: 0 auto;
+}
+
+/*배경이미지*/
+header .main-bgImg{
+  width: 100%;
+  height: 90vh;
+  background: url(../image/benz_main.avif) center/cover;
+  position: relative;
+}
+
+/*상단메뉴 목록*/
+.topMenu{
+  width: 100%;
+  height: 80px;
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+/*요소 공중에 띄워서 양끝에 배치*/
+.topMenu > ul{
+  display: flex;
+  border: 1px solid blue;
+  position: absolute;
+}
+.topMenu > ul:nth-of-type(1){
+  left: 10px;
+}
+.topMenu > ul:nth-of-type(2){
+  right: 10px;
+}
+.topMenu > ul > li{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px 20px;
+  color: #888;
+}
+.topMenu > ul > li:hover{
+  color: #fff;
+}
+
+/*배경 이미지 위에 띄우는 텍스트 요소*/
+.topMenu-text{
+  position: absolute;
+  bottom: 40%;
+  left: 50px;
+  z-index: 10;
+  width: 600px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.topMenu-text > h1{
+  font-size: 55px;
+}
+.topMenu-text > button{
+  margin-top: 50px;
+}
+
+.topMenu-btn{
+  position: absolute;
+  bottom: 0;
+  left: 38%;
+}
+.topMenu-btn > ul{
+  width: 450px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+.topMenu-btn > ul > li{
+  width: 150px;
+  height: 50px;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding-top: 10px;
+  z-index: 10;
+  cursor: pointer;
+}
+.topMenu-btn > ul > li:nth-of-type(1){
+  background-color: #333;
+  color: #fff;
+}
+/*--------------------------------------------*/
+/*Our-Recommendations 영역*/
+.Our-Recommendations{}
+.Our-Recommendations > h2{
+  color: #fff;
+  font-size: 30px;
+  margin: 15px;
+}
+.Our-Re{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.Our-Re > .el1{
+  border: 1px solid #ccc;
+  width: 1100px;
+  height: 860px;
+  margin: 10px 20px;
+  transition: all .5s;
+  color: #fff;
+}
+.Our-Re > .el1 > img{
+  width: 1095px;
+  height: 600px;
+  /*이미지 밑으로 갈수록 점점 흐리게 효과넣기*/
+}
+.Our-Re > .el2{
+  border: 1px solid #ccc;
+  width: 560px;
+  background: url(../image/benz_logoImg.avif) center/cover;
+  z-index: 50;
+  margin: 10px 20px;
+  color: #fff;
+  transition: all .5s;
+  position: relative;
+}
+.Our-Re > .el2 > p{
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  font-size: 32px;
+}
+.Our-Re > .el2 > button{
+  position: absolute;
+  bottom: 8%;
+  left: 10%;
+}
+/*마우스이벤트*/
+.Our-Re > .el1:hover,
+.Our-Re > .el2:hover{
+  transform: scale(1.05);
+}
+
+.Our-el1-tex{
+  width: 700px;
+  margin: 40px 25px 10px;
+}
+.Our-el1-tex > p{
+  font-size: 32px;
+}
+.Our-el1-Btn{
+  display: flex;
+  align-items: center;
+}
+.Our-el1-Btn > button{
+  margin-top: 20px;
+  margin-right: 10px;
+}
+.Our-el1-Btn > button:nth-of-type(2){
+  background-color: transparent;
+  text-decoration: underline;
+  font-size: 18px;
+}
