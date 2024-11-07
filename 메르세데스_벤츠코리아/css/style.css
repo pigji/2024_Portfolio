@@ -485,16 +485,17 @@ header .main-bgImg{
   font-size: 19px;
 }
 /*--------------------------------------------*/
-/*section 영역*/
-.Service_AccAll{
-  margin-top: 70px;
-}
+/*section 영역 : 슬라이드가 구현되는 영역*/
 .Service_and_Accessories{
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: beige;
 }
 
+
+.Service_AccAll2{
+  margin-top: 70px;
+}
 .Service_Accbox{
   display: flex;
   justify-content: center;
