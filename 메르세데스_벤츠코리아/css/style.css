@@ -486,13 +486,33 @@ header .main-bgImg{
 }
 /*--------------------------------------------*/
 /*section 영역 : 슬라이드가 구현되는 영역*/
+.Service_AccAll1{
+
+}
+
 .Service_and_Accessories{
-  width: 100%;
-  height: 100vh;
   background-color: beige;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 20px;
+}
+#banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#banner > li{
+  margin: 0 40px;
+}
+/*이미지 요소*/
+.bannerBox > img{
+  width: 780px;
+  height: 430px;
 }
 
 
+/*----------------------------------------*/
 .Service_AccAll2{
   margin-top: 70px;
 }
