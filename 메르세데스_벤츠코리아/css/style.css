@@ -1,4 +1,6 @@
 /*폰트*/
+/*구글폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&display=swap');
 
 /*초기화*/
 *{margin: 0; padding: 0; box-sizing: border-box;}
@@ -31,6 +33,12 @@ section > .container,
 footer > .container{
   width: 1700px;
   margin: 0 auto;
+}
+
+h2{
+  font-family: "Lora", serif;
+  font-weight: normal;
+  font-size: 40px;
 }
 /*--------------------------------------------*/
 /*배경이미지*/
@@ -140,6 +148,9 @@ header .main-bgImg{
   font-size: 30px;
   margin-top: 60px;
   margin-bottom: 5px;
+  font-family: "Lora", serif;
+  font-weight: normal;
+  font-size: 40px;
 }
 .Our-Re{
   width: 100%;
@@ -157,7 +168,7 @@ header .main-bgImg{
   overflow: hidden;
 }
 .Our-Re > .el1 > img{
-  width: 1095px;
+  width: 1100px;
   height: 600px;
   transition: all .5s;
   /*이미지 밑으로 갈수록 점점 흐리게 효과넣기*/
@@ -325,18 +336,82 @@ header .main-bgImg{
 /*--------------------------------------------*/
 /*Our_Models 영역*/
 .Our_Models{
-  background-color: beige;
+  margin-top: 70px;
 }
+/*버튼요소 한줄정렬*/
+.Our-current-btn{
+  margin-top: 30px;
+}
+.Our-current-btn > button{
+  display: inline;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  color: #333;
+  font-size: 15px;
+  border-radius: 0;
+  font-weight: bold;
+  width: 200px;
+}
+.Our-current-btn > button:hover{
+  background-color: #eee;
+}
+
+/*자동차 모델*/
+.Our_ModelAll{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 30px auto;
+  width: 100%;
+}
+.Our_ModelAll > .modelBox{
+  background: linear-gradient(#dddcdc, #f8f8f8);
+  width: 500px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px 15px;
+  margin: 30px 15px;
+  cursor: pointer;
+  font-family: "Lora", serif;
+  font-weight: normal;
+}
+.modelBox > .modelName{
+  position: absolute;
+  bottom: 10px;
+}
+.modelBox > .modelName > p{
+  font-size: 14px;
+  color: #333;
+}
+.modelBox > .modelName > b{
+  font-size: 30px;
+}
+/*자동차 모델 이미지*/
+.modelBox > img{
+  position: absolute;
+  right: 0;
+  top: -80px;
+  width: 320px;
+  height: 160px;
+  transition: all 0.5s;
+}
+.modelBox > img:hover{
+  transform: scale(1.1);
+}
+
+
+
+
 /*--------------------------------------------*/
 /*Our-current-offers 영역*/
 .Our-current-offers{
   width: 100%;
   height: 100%;
-  margin-top: 30px;
+  margin-top: 120px;
   padding: 10px 0;
-}
-.Our-current-offers > p{
-  font-size: 30px;
 }
 .Our-current-offers i{
   padding-right: 5px;
@@ -487,15 +562,15 @@ header .main-bgImg{
 /*--------------------------------------------*/
 /*section 영역 : 슬라이드가 구현되는 영역*/
 .Service_AccAll1{
-
+  margin-top: 100px;
 }
 
 .Service_and_Accessories{
-  background-color: beige;
   width: 100%;
   height: 100%;
   position: relative;
   padding: 20px;
+  overflow: hidden;
 }
 #banner{
   display: flex;
@@ -509,6 +584,32 @@ header .main-bgImg{
 .bannerBox > img{
   width: 780px;
   height: 430px;
+}
+
+/*텍스트 요소*/
+.bannerText{
+  margin-top: 5px;
+}
+.bannerText > b{
+  font-size: 19px;
+}
+.bannerText > p{
+  font-size: 17px;
+  margin-top: 5px;
+  color: #333;
+}
+.bannerText > button{
+  border: 2px solid #888;
+  background-color: transparent;
+  color: #333;
+  border-radius: 0;
+  width: 230px;
+  margin-top: 25px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.bannerText > button:hover{
+  background-color: #eee;
 }
 
 
@@ -533,6 +634,8 @@ header .main-bgImg{
 .Service_AccText1 > h3{
   font-size: 40px;
   margin-bottom: 20px;
+  font-family: "Lora", serif;
+  font-weight: normal;
 }
 .Service_AccText1 > p{
   line-height: 1.7;

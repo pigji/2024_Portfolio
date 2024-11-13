@@ -80,9 +80,9 @@ function autoplay(){
 }
 
 //슬라이드 자동으로 실행
-let timer = setInterval(autoplay, 3000);
+let timer = setInterval(autoplay, 2500);
 
 //마우스 hover시 슬라이드 정지 , 아웃시 슬라이드 재개
 const listWrap = document.querySelector('.Service_AccAll1');
 listWrap.addEventListener('mouseover', () =>  clearInterval(timer));
-listWrap.addEventListener('mouseout', () => timer = setInterval(autoplay, 3000));
+listWrap.addEventListener('mouseout', () => timer = setInterval(autoplay, 2500));
