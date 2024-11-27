@@ -1,14 +1,29 @@
 /*폰트*/
 
 /*초기화*/
-*{margin: 0; padding: 0; box-sizing: border-box;}
-ul, li{list-style: none;}
-li{cursor: pointer;}
-a{text-decoration: none; color: inherit;}
-body{margin: 0 auto; min-width: 1000px;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+li {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+}
 /*------------------------------------------------*/
 /*공통속성 : container*/
-.container{
+.container {
   width: 1600px;
   height: 100%;
   border: 1px solid red;
@@ -19,70 +34,115 @@ body{margin: 0 auto; min-width: 1000px;}
 header{
   width: 100%;
   height: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 300px;
 }
 
 /*fixed되는 상단 nav 메뉴*/
-.nevMenu{
+.nevMenu {
   width: 1600px;
   border: 2px solid yellow;
+  background-color: #fff;
   position: fixed;
   padding: 10px;
   box-sizing: border-box;
+  z-index: 999;
 }
 
-.TopMnue > ul{
+.TopMnue > ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.TopMnue > ul > li{
+.TopMnue > ul > li {
   padding: 10px;
   margin: 0 20px;
   box-sizing: border-box;
 }
 
-.SubMenu{
+.SubMenu {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.SubMenu > ul{
+.SubMenu > ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.SubMenu > ul > li{
+.SubMenu > ul > li {
   margin: 0 40px;
   font-weight: bold;
 }
 
-.logoImg{
+.logoImg {
   width: 200px;
   height: 80px;
   border: 1px solid blue;
 }
 /*------------------------------------------------*/
 /*main*/
-main{
+main {
   width: 100%;
   height: 100%;
-  background-color: aqua;
-  margin-top: 200px;
+  background-color: antiquewhite; /*영역 확인용*/
+  margin-bottom: 50px;
 }
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.title > h2 {
+  font-size: 60px;
+  position: absolute;
+  top: -55px;
+}
+.title > p {
+  position: absolute;
+  right: 0;
+  top: -25px;
+}
+
+.banner {
+  width: 100%;
+  height: 450px;
+  border: 2px solid blue;
+}
+
+.guide > ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 375px;
+}
+.guide > ul > li{
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: -0.5px;
+  width: 360px;
+  height: 80px;
+  display: block;
+  text-align: center;
+  line-height: 80px;
+  border-right: 1px solid #fff;
+}
+.guide > ul > li:last-child{
+  border: none;
+}
+
 /*------------------------------------------------*/
 /*section*/
 /*------------------------------------------------*/
 /*footer*/
-footer{
+footer {
   width: 100%;
   height: 350px;
-  background-color: #25282D;;
+  background-color: #25282d;
   margin-bottom: 50px;
   padding: 20px;
 }
 
-.footerBox{
+.footerBox {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,7 +150,7 @@ footer{
   padding: 30px 20px 0;
   color: #fff;
 }
-.footerTop{
+.footerTop {
   width: 1580px;
   height: 100%;
   margin: 0 auto;
@@ -99,45 +159,44 @@ footer{
   align-items: center;
 }
 
-
 /*왼쪽 요소*/
-.leftMenu > .footerTop > ul{
+.leftMenu > .footerTop > ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.leftMenu > .footerTop > ul > li{
+.leftMenu > .footerTop > ul > li {
   margin-right: 25px;
   font-weight: bold;
 }
 
-.address{
+.address {
   margin-top: 40px;
   font-size: 14px;
   color: #b5b5b5;
 }
-.footerTxt{
+.footerTxt {
   font-size: 14px;
   margin-top: 25px;
   color: #b5b5b5;
 }
 /*아이콘 요소*/
-.sns-icon{
+.sns-icon {
   display: flex;
   align-items: center;
   margin-top: 20px;
 }
-.sns-icon > p{
+.sns-icon > p {
   margin-right: 20px;
   font-size: 20px;
 }
 
 /*오른쪽 요소*/
-.rightMenu{
+.rightMenu {
   display: flex;
   align-items: center;
 }
-.plusBox{
+.plusBox {
   width: 220px;
   height: 50px;
   margin-left: 15px;
