@@ -298,7 +298,6 @@ section{
 .Hospital-introduction-slide{
   width: 100%;
   height: 100%;
-  border: 1px solid red;
 }
 
 .slideshow-container {
@@ -319,7 +318,7 @@ section{
   width: 450px;
   height: 450px;
   margin-left: 100px;
-  margin-right: 50px;
+  margin-right: 150px;
 }
 /*각 요소 배경이미지 변경*/
 .mySlides:nth-of-type(3) .img{background: url(../images/분당서울대학교병원.jpg) center/cover;}
@@ -345,7 +344,7 @@ section{
    user-select: none;
  }
 
- /* Position the "next button" to the right */
+ /* 버튼 위치설정 */
  .prev{
   left: 0;
  }
@@ -354,12 +353,11 @@ section{
    border-radius: 3px 0 0 3px;
  }
 
- /* On hover, add a black background color with a little bit see-through */
+ /* 마우스이벤트 효과 */
  .prev:hover,
  .next:hover {
    background-color: rgba(0, 0, 0, 0.8);
  }
-
 
 .active,
 .dot:hover {
@@ -372,16 +370,50 @@ section{
   animation-duration: 1.5s;
 }
 
+/*텍스트 요소*/
+.text{
+  margin-top: 50px;
+  border: 1px solid red;
+  width: 700px;
+}
+.text > b{
+  font-size: 45px;
+  color: #333;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  display: block;
+}
+.text > .en{
+  font-size: 13px;
+  color: #555;
+  letter-spacing: 1.3px;
+}
 
+.subText{
+  margin-top: 30px;
+  font-size: 14px;
+  color: #333;
+}
 
-
-
-
-
-
-
-
-
+/*버튼요소*/
+.textBtn{
+  margin-top: 170px;
+  margin-right: 50px;
+  float: right;
+  font-size: 15px;
+  color: #444;
+  width: 120px;
+  height: 45px;
+}
+.textBtn > p{
+  cursor: pointer;
+  letter-spacing: 1.3px;
+}
+.textBtn > p:hover{
+  font-weight: bold;
+}
+/*------------------------------------------------*/
+/**/
 
 
 /*------------------------------------------------*/
