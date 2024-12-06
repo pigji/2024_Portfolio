@@ -15,7 +15,7 @@ body{margin: 0 auto; min-width: 1000px;}
   margin: 0 auto;
 }
 /*------------------------------------------------*/
-/*header*/
+/*header : 상단 fixed되는 메뉴*/
 header{
   width: 100%;
   height: 100%;
@@ -70,7 +70,7 @@ header{
   padding-top: 10px;
 }
 /*------------------------------------------------*/
-/*main*/
+/*main : banner영역*/
 main {
   width: 100%;
   height: 100%;
@@ -131,30 +131,54 @@ main {
   left: 0;
 }
 
-
-
 .guide > ul {
   display: flex;
-  justify-content: flex-end;
-  margin-left: 375px;
+  justify-content: flex-start;
+  /* margin-left: 375px; */
 }
 .guide > ul > li{
-  font-size: 18px;
-  color: #fff;
-  background-color: #425d8f; /*35538b*/
-  letter-spacing: -0.5px;
-  width: 360px;
+  width: 380px;
   height: 80px;
+  font-size: 18px;
+  background-color: #425d8f; /*35538b*/
+  color: #fff;
+  letter-spacing: -0.5px;
   display: block;
   text-align: center;
   line-height: 80px;
-  border-right: 1px solid #fff;
 }
-.guide > ul > li:last-child{
-  border: none;
+/*구분선 가상요소*/
+.guide > ul > li::after{
+  content: "|";
+  width: 2px;
+  height: 60px;
+  float: right;
 }
+/*가상요소 구분선 마지막영역 제거*/
+.guide > ul > li:last-child:after{
+  content: "";
+}
+
+/*이미지 아이콘*/
+.guide > ul > li img{
+  margin-right: 15px;
+  margin-top: 25px;
+}
+.guide > ul > li:nth-of-type(2) img{
+  width: 30px;
+  height: 26px;
+}
+.guide > ul > li:nth-of-type(3) img{
+  width: 23px;
+  height: 29px;
+}
+.guide > ul > li:nth-of-type(4) img{
+  width: 28px;
+  height: 25px;
+}
+
 /*------------------------------------------------*/
-/*section*/
+/*section : 대표 병원3개 소개 + 공지사항*/
 section{
   width: 100%;
   height: 100%;
@@ -294,7 +318,7 @@ section{
   margin-top: 80px;
 }
 /*------------------------------------------------*/
-/*section : 병원소개 슬라이드 쇼*/
+/*section : 기관병원 소개 슬라이드*/
 .Hospital-introduction-slide{
   width: 100%;
   height: 100%;
@@ -413,7 +437,82 @@ section{
   font-weight: bold;
 }
 /*------------------------------------------------*/
-/**/
+/*section : 건강정보*/
+.health-information{
+  width: 100%;
+  height: 100%;
+}
+.healthTitle{
+  width: 100%;
+  height: 100%;
+  margin: 20px 0;
+  text-align: center;
+}
+.healthTitle > h4{
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+.healthTitle > p{
+  color: #444;
+  font-size: 20px;
+}
+
+.health{
+  margin-top: 50px;
+}
+.healthBox{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*배경이미지 요소*/
+.healthImg{
+  width: 300px;
+  height: 420px;
+  text-align: center;
+  padding: 50px 10px;
+  margin: 0 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+/*해당 영역별 배경이미지*/
+.healthImg:nth-of-type(1){ background: url(../images/건강정보1.jpg) center/cover; }
+.healthImg:nth-of-type(2){ background: url(../images/건강정보2.jpg) center/cover; }
+.healthImg:nth-of-type(3){ background: url(../images/건강정보3.jpg) center/cover; }
+.healthImg:nth-of-type(4){ background: url(../images/건강정보4.jpg) center/cover; }
+
+/*텍스트 요소*/
+.healthTxt{
+  color: #fff;
+}
+.healthTxt > .tit{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+/*구분선*/
+.border{
+  border: 1px solid #fff;
+  width: 40px;
+  margin-left: 120px;
+  margin-bottom: 20px;
+}
+.healthTxt > p{
+  font-size: 17px;
+}
+
+.sns{
+  margin: 30px auto 0;
+}
+.sns > li{
+  border: 1px solid #fff;
+  width: 240px;
+  height: 50px;
+  line-height: 48px;
+  margin-left: 22px;
+}
 
 
 /*------------------------------------------------*/
