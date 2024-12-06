@@ -1,0 +1,139 @@
+/*구글폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Praise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lilita+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Praise&display=swap');
+
+/*-----------------------------------------------*/
+/*초기화*/
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul, li{list-style: none;}
+i, li{cursor: pointer;}
+
+a{text-decoration: none; color: inherit;}
+body{margin: 0 auto; min-width: 1000px;}
+/*-----------------------------------------------*/
+/*공통속성 : container*/
+.container {
+  width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+}
+header{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 150px;
+  font-family: "Libre Baskerville", serif;
+  background-color: #fff;
+}
+section{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 100px;
+}
+/*-----------------------------------------------*/
+/*fixed되는 상단 nav 메뉴*/
+.nav{
+  width: 100vw;
+  position: fixed;
+  padding: 20px 100px;
+  box-sizing: border-box;
+  z-index: 999;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+.navTit > p{
+  font-size: 35px;
+}
+
+.navMenu > ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navMenu > ul > li {
+  margin: 0 25px;
+  box-sizing: border-box;
+  font-weight: bold;
+  color: #333;
+}
+/*-----------------------------------------------*/
+/*section : home*/
+.homeBox{
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*텍스트 요소*/
+.homeTxt{
+  padding: 10px;
+}
+.homeTxt b{
+  color: #6495ed;
+}
+.homeTxt > p{
+  margin: 40px 0;
+  font-size: 17px;
+  color: #444;
+}
+.homeTxt > p:nth-of-type(1){
+  font-size: 38px;
+  line-height: 45px;
+}
+/*프로필 이미지*/
+.homeProflieImg{
+  margin: 0 70px;
+  border-left: 1px solid #ccc;
+}
+.homeProflieImg > img{
+  width: 425px;
+  height: 550px;
+  margin-left: 70px;
+}
+/*-----------------------------------------------*/ 
+/*section : proflie*/
+#proflie{
+  background-color: #222;
+  color: #fff;
+  padding: 55px 0;
+}
+.proflieContent{
+  
+}
+.proflieContent > h2{
+  text-align: center;
+  font-size: 36px;
+}
+.proflieBox{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  grid-template-columns: 350px 1fr;
+  grid-gap: 15px;
+  border: 1px solid #6666;
+  padding: 40px 40px 60px;
+  background-color: #0007;
+  margin-top: 50px;
+}
+
+/*프로필 이미지*/
+.proflieBoxImg{
+  width: 350px;
+  height: 500px;
+  background: url(../images/프로필사진3.jpg) center/cover;
+  margin-left: 70px;
+}
+/*텍스트 요소*/
+.proflieBoxTxt{
+  margin-left: 70px;
+}
+
+/*-----------------------------------------------*/
+/*section : skill*/
+/*-----------------------------------------------*/
+/*section : portpolio*/
+/*-----------------------------------------------*/
+/*section : contace*/
