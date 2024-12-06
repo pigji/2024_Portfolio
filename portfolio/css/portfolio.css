@@ -20,9 +20,8 @@ body{margin: 0 auto; min-width: 1000px;}
 header{
   width: 100%;
   height: 100%;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   font-family: "Libre Baskerville", serif;
-  background-color: #fff;
 }
 section{
   width: 100%;
@@ -34,7 +33,7 @@ section{
 .nav{
   width: 100vw;
   position: fixed;
-  padding: 20px 100px;
+  padding: 20px 120px;
   box-sizing: border-box;
   z-index: 999;
   top: 0;
@@ -42,10 +41,11 @@ section{
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  background-color: #fff;
   border: 1px solid red;
 }
 .navTit > p{
-  font-size: 35px;
+  font-size: 40px;
 }
 
 .navMenu > ul {
@@ -62,6 +62,7 @@ section{
 /*-----------------------------------------------*/
 /*section : home*/
 .homeBox{
+  height: 100vh;
   padding: 20px 0;
   display: flex;
   justify-content: center;
@@ -96,12 +97,13 @@ section{
 /*-----------------------------------------------*/ 
 /*section : proflie*/
 #proflie{
+  height: 100vh;
+  padding: 55px 0;
   background-color: #222;
   color: #fff;
-  padding: 55px 0;
 }
 .proflieContent{
-  
+  padding: 60px 0;
 }
 .proflieContent > h2{
   text-align: center;
@@ -111,7 +113,6 @@ section{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  grid-template-columns: 350px 1fr;
   grid-gap: 15px;
   border: 1px solid #6666;
   padding: 40px 40px 60px;
@@ -124,15 +125,47 @@ section{
   width: 350px;
   height: 500px;
   background: url(../images/프로필사진3.jpg) center/cover;
-  margin-left: 70px;
 }
 /*텍스트 요소*/
 .proflieBoxTxt{
-  margin-left: 70px;
+  margin-left: 50px;
 }
 
+.about{
+  margin-bottom: 30px;
+}
+
+.other{
+  display: flex;
+  justify-content: flex-start;  
+}
+.otherBox{
+  margin-bottom: 30px;
+}
+.otherBox:nth-of-type(1) .other{
+  border: 1px solid red;
+}
+.otherBox:nth-of-type(2) .other{
+  border: 1px solid red;
+}
+.otherBox:nth-of-type(1) .other > .other-element:nth-of-type(1){
+  border: 2px solid yellow;
+  width: 300px;
+}
+.otherBox:nth-of-type(2) .other > .other-element:nth-of-type(1){
+  border: 2px solid yellow;
+  width: 300px;
+}
+.other-element{
+  margin-right: 100px;
+  font-size: 15px;
+  line-height: 30px;
+}
 /*-----------------------------------------------*/
 /*section : skill*/
+#skill{
+  height: 100vh;
+}
 /*-----------------------------------------------*/
 /*section : portpolio*/
 /*-----------------------------------------------*/
