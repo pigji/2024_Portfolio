@@ -226,13 +226,13 @@ section{
 /*포트포리오 이미지*/
 .pp-img{
   width: 100%;
-  height: 300px;
+  height: 320px;
   background-color: #ccc;
   overflow: hidden;
   transition: all .5s;
   overflow: hidden;
   object-fit: cover;
-  border: 3px solid black;
+  border: 1px solid #ccc;
   filter: grayscale(40%);
 }
 .pp-img:hover{
@@ -240,23 +240,23 @@ section{
 }
 
 .Img1{background: url(../images/project-img/웹페이지\ 구현1.png) center/cover;}
-.Img2{background: url(../images/) center/cover;}
+.Img2{background: url(../images/project-img/프로필카드.png) center/cover;}
 .Img3{background: url(../images/animation-img/Representative-img.PNG) center/cover;}
-.Img4{background: url(../images/) center/cover;}
-.Img5{background: url(../images/) center/cover;}
-.Img6{background: url(../images/) center/cover;}
-.Img7{background: url(../images/) center/cover;}
-.Img8{background: url(../images/) center/cover;}
-.Img9{background: url(../images/) center/cover;}
-.Img10{background: url(../images/) center/cover;}
-.Img11{background: url(../images/) center/cover;}
-.Img12{background: url(../images/) center/cover;}
-.Img13{background: url(../images/) center/cover;}
-.Img14{background: url(../images/) center/cover;}
-.Img15{background: url(../images/) center/cover;}
-.Img16{background: url(../images/) center/cover;}
-.Img17{background: url(../images/) center/cover;}
-.Img18{background: url(../images/) center/cover;}
+.Img4{background: url(../images/project-img/파노라마.png) center/cover;}
+.Img5{background: url(../images/project-img/메가박스.png) center/cover;}
+.Img6{background: url(../images/project-img/반응형웹갤러리.png) center/cover;}
+.Img7{background: url(../images/project-img/뮤직플레이어.png) center/cover;}
+.Img8{background: url(../images/project-img/동영상웹페이지.png) center/cover;}
+.Img9{background: url(../images/project-img/swiperAPI.png) center/cover;}
+.Img10{background: url(../images/project-img/3D스크롤.png) center/cover;}
+.Img11{background: url(../images/project-img/반응형웹페이지.png) center/cover;}
+.Img12{background: url(../images/project-img/슈팅게임구현.png) center/cover;}
+.Img13{background: url(../images/project-img/강아지똥피하기.png) center/cover;}
+.Img14{background: url(../images/project-img/에어팟.png) center/cover;}
+.Img15{background: url(../images/project-img/벤츠\(자동차\).png) center/cover;}
+.Img16{background: url(../images/project-img/계산기.png) center/cover;}
+.Img17{background: url(../images/project-img/서울대학교병원.png) center/cover;}
+.Img18{background: url(../images/project-img/포트폴리오.png) center/cover;}
 .Img19{background: url(../images/) center/cover;}
 .Img20{background: url(../images/) center/cover;}
 

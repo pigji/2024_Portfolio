@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마을 애니메이션 제작</title>
+
+  <style>
+    /*구글폰트*/
+    @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+    
+    *{margin: 0; padding: 0;}
+    body{
+      width: 100%;
+      height: 100vh;
+      overflow: hidden; /*넘어가는 부분 가려줌*/
+      animation: sky linear 20s infinite; /*배경변화 애니메이션 이름:sky, linear:일정 가속도, infinite:무한반복*/
+    }
+    @keyframes sky{ /*배경색 애니메이션*/
+      0%{background-color: #b08ffc;}
+      25%{background-color: #b1e1e2;}
+      50%{background-color: #fcd2e2;}
+      75%{background-color: #636888;}
+      100%{background-color: #b08fcc;}
+    }
+
+    h1{
+      width: 1000px;
+      position: absolute; /*공중에 띄움*/
+      top: 50%; left: 50%;
+      transform: translate(-50%, 150%);
+      font: 92px/1 "Poiret one";
+      color: white;
+      text-align: center;
+      animation: day linear 20s infinite; /*애니메이션 이름:day, linear:일정 가속도, infinite:무한반복*/
+    }
+    section{
+      width: 1000px;
+      height: 400px;
+      position: absolute; /*공중에 띄움*/
+      top: 50%; left: 50%;
+      transform: translate(-50%, -70%); /*위치설정*/
+    }
+    /*구름 이미지*/
+    section .sky{
+      position: absolute; /*공중에 띄움*/
+      width: 100%;
+      height: 100%;
+    }
+
+    /*해 이미지*/
+    section .sky .sun{ 
+      position: absolute;
+      top: -150px; left: 50%;
+      margin-left: -100px;
+      transform-origin: center 500px; /*트렌스폼의 기준을점 x축은 center, y축은 500px 위치*/
+      animation: sun linear 20s infinite; /*애니메이션 이름:sun, linear:일정 가속도, infinite:무한반복*/
+    }
+
+    /*구름 이미지*/
+    section .sky .cloud1{
+      position: absolute;
+      top: -30px; left: 10%;
+      animation: flow linear 10s infinite;
+    }
+    section .sky .cloud2{
+      position: absolute;
+      top: 20px; left: 0;
+      animation: flow linear 20s infinite;
+    }
+
+    /*집 이미지*/
+    section .town .night{
+      position: absolute;
+      bottom: 0; left: 40px;
+    }
+    section .town .day{
+      position: absolute;
+      bottom: 0; left: 40px;
+      animation: day linear 20s infinite;
+    }
+    
+    /*관람차 이미지*/
+    section .town .circle{
+      position: absolute;
+      bottom: 104px; left: 50%;
+      margin-left: -160px;
+      opacity: 0.7; /*반투명하게 설정*/
+      animation: rotation linear 20s infinite;  
+    }
+
+    /*자전거 타는 사람 이미지*/
+    section > .people .man{
+      position: absolute;
+      left: 0; bottom: 0;
+      animation: flow linear 7s infinite;
+    }
+    /*사람이미지*/
+    section > .people .family{
+      position: absolute;
+      left: 0; bottom: 0;
+      animation: flow linear 20s infinite;
+    }
+
+
+    /*애니메이션 속성*/
+    @keyframes sun{ /*해 이미지*/
+      0%{opacity: 0; transform: rotate(-90deg);}  /*-90도 부터 시작*/
+      25%{opacity: 1; transform: rotate(-30deg);}
+      50%{opacity: 1; transform: rotate(30deg);}
+      75%{opacity: 0; transform: rotate(90deg);}
+      100%{opacity: 0; transform: rotate(-90deg);}
+    }
+    @keyframes flow{ /*구름 이미지*/
+      0%{opacity: 0; left: 0;}
+      10%{opacity: 1;}
+      80%{opacity: 1;}  /*80% 위치에서 부터 서서히 희미해짐*/
+      100%{opacity: 0; left: 90%;}
+    }
+    @keyframes day{ /*집 이미지*/
+      0%{opacity: 0;}
+      25%{opacity: 1;}
+      50%{opacity: 1;}
+      75%{opacity: 0;}
+      100%{opacity: 0;}
+    }
+    @keyframes rotation{  /*관람차 이미지*/
+      0%{transform: rotate(0deg);}
+      100%{transform: rotate(360deg);}
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Have a Good Day</h1>
+  <section>
+    <article class="sky">
+      <img src="images/sun.png" class="sun" alt="">
+      <img src="images/cloud1.png" class="cloud1" alt="">
+      <img src="images/cloud2.png" class="cloud2" alt="">
+    </article>
+    <article class="town">
+      <img src="images/circle.png" class="circle" alt="">
+      <img src="images/town_night.png" class="night" alt="">
+      <img src="images/town_day.png" class="day" alt="">
+    </article>
+    <article class="people">
+      <img src="images/man.png" class="man" alt="">
+      <img src="images/family.png" class="family" alt="">
+    </article>
+  </section>
+</body>
+</html>
