@@ -57,6 +57,7 @@
 
     <!-- 로컬 js -->
     <script src="./js/script.js" defer></script>
+    <script src="./js/video.js" defer></script>
   </head>
   <body>
     <!-- 시각장애인 웹 접근성을 위한 skip _ 지우지않아도 됩니다. -->
@@ -172,7 +173,7 @@
       
       <!--main-->
       <main id="main">
-         <section id="section1">
+         <section id="section1" class="section1">
             <div class="m-video">
                <video src="./video/main.mp4" id="mainVideo" autoplay muted poster="./img/GS-blog-historical-conversions.jpg"></video>
             </div>
@@ -181,37 +182,37 @@
             </div>
             <div class="m-next-section">
                <span><a href="#">explore stories</a></span>
-               <div class="m-icon-footer">
-                  <div class="icon-footer-left">
-                     <ul>
-                        <li class="addIconBtn">
-                           <span><a href="javascript:" class="videoIcon"><i class="fas fa-video"></i></a></span>
-                        </li>
-                        <li>
-                           <span><a href="javascript:" class="wroldIcon"><i class="fas fa-globe"></i></a></span>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="icon-footer-center">
-                     <ul>
-                        <li>
-                           <span><a href="javascript:" class="nextIcon"><i class="fas fa-chevron-down"></i></a></span>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="icon-footer-right">
-                     <ul>
-                        <li>
-                           <span><a href="javascript:" class="pauseIcon"><i class="fas fa-pause"></i></a></span>
-                        </li>
-                        <li>
-                           <span><a href="javascript:" class="mutedIcon"><i class="fas fa-volume-mute"></i></a></span>
-                        </li>
-                     </ul>
-                  </div> <!--icon-footer-right-->
-               </div>
             </div>
-         </section>
+            <div class="m-icon-footer">
+               <div class="icon-footer-left">
+                  <ul>
+                     <li class="addIconBtn">
+                        <span><a href="javascript:" class="videoIcon"><i class="fas fa-video"></i></a></span>
+                     </li>
+                     <li>
+                        <span><a href="javascript:" class="wroldIcon"><i class="fas fa-globe"></i></a></span>
+                     </li>
+                  </ul>
+               </div>
+               <div class="icon-footer-center">
+                  <ul>
+                     <li>
+                        <span><a href="javascript:" class="nextIcon"><i class="fas fa-chevron-down"></i></a></span>
+                     </li>
+                  </ul>
+               </div>
+               <div class="icon-footer-right">
+                  <ul>
+                     <li>
+                        <span><a href="javascript:" class="pauseIcon"><i class="fas fa-pause"></i></a></span>
+                     </li>
+                     <li>
+                        <span><a href="javascript:" class="mutedIcon"><i class="fas fa-volume-mute"></i></a></span>
+                     </li>
+                  </ul>
+               </div>
+            </div> <!--m-icon-footer-->
+         </section>   
       </main>
     </div>  <!--wrap-->
   </body>
