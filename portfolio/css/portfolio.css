@@ -229,14 +229,37 @@ section{
   height: 300px;
   background-color: #ccc;
   overflow: hidden;
-  transition: all 0.3s;
+  transition: all .5s;
+  overflow: hidden;
+  object-fit: cover;
+  border: 3px solid black;
+  filter: grayscale(40%);
 }
-.Img1:hover{
-  transform: scale(1.05);
+.pp-img:hover{
+  filter: grayscale(0);
 }
-.Img2{}
-.Img3{}
-.Img4{}
+
+.Img1{background: url(../images/project-img/웹페이지\ 구현1.png) center/cover;}
+.Img2{background: url(../images/) center/cover;}
+.Img3{background: url(../images/animation-img/Representative-img.PNG) center/cover;}
+.Img4{background: url(../images/) center/cover;}
+.Img5{background: url(../images/) center/cover;}
+.Img6{background: url(../images/) center/cover;}
+.Img7{background: url(../images/) center/cover;}
+.Img8{background: url(../images/) center/cover;}
+.Img9{background: url(../images/) center/cover;}
+.Img10{background: url(../images/) center/cover;}
+.Img11{background: url(../images/) center/cover;}
+.Img12{background: url(../images/) center/cover;}
+.Img13{background: url(../images/) center/cover;}
+.Img14{background: url(../images/) center/cover;}
+.Img15{background: url(../images/) center/cover;}
+.Img16{background: url(../images/) center/cover;}
+.Img17{background: url(../images/) center/cover;}
+.Img18{background: url(../images/) center/cover;}
+.Img19{background: url(../images/) center/cover;}
+.Img20{background: url(../images/) center/cover;}
+
 
 /*텍스트 요소*/
 .pp-txt{

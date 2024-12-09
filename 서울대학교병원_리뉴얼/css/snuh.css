@@ -334,22 +334,24 @@ section{
 }
 .slideBox{
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding:  30px 10px;
+  border: 1px solid black;
 }
 
 /*배경이미지*/
 .img{
   width: 450px;
   height: 450px;
-  margin-left: 100px;
-  margin-right: 150px;
+  margin-right: 100px;
 }
 /*각 요소 배경이미지 변경*/
-.mySlides:nth-of-type(3) .img{background: url(../images/분당서울대학교병원.jpg) center/cover;}
-.mySlides:nth-of-type(4) .img{background: url(../images/보라매병원.jpg) center/cover;}
-.mySlides:nth-of-type(5) .img{background: url(../images/헬스케어시스템.jpg) center/cover;}
-.mySlides:nth-of-type(2) .img{background: url(../images/재활병원.jpg) center/cover;}
 .mySlides:nth-of-type(1) .img{background: url(../images/치료센터.jpg) center/cover;}
+.mySlides:nth-of-type(2) .img{background: url(../images/재활병원.jpg) center/cover;}
+.mySlides:nth-of-type(3) .img{background: url(../images/분당서울대학교병원.jpg) center/cover;}
+.mySlides:nth-of-type(4) .img{background: url(../images/재활센터이미지3.jpg) center/cover;}
+.mySlides:nth-of-type(5) .img{background: url(../images/헬스케어시스템.jpg) center/cover;}
 
  /* 이전, 다음 버튼 */
  .prev,
@@ -396,9 +398,8 @@ section{
 
 /*텍스트 요소*/
 .text{
-  margin-top: 50px;
   border: 1px solid red;
-  width: 700px;
+  width: 740px;
 }
 .text > b{
   font-size: 45px;
@@ -411,18 +412,19 @@ section{
   font-size: 13px;
   color: #555;
   letter-spacing: 1.3px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
 }
 
 .subText{
   margin-top: 30px;
-  font-size: 14px;
+  font-size: 15px;
   color: #333;
 }
 
 /*버튼요소*/
 .textBtn{
-  margin-top: 170px;
-  margin-right: 50px;
+  margin-top: 50px;
   float: right;
   font-size: 15px;
   color: #444;
