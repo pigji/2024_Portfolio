@@ -178,7 +178,7 @@ section{
 /*-----------------------------------------------*/
 /*section : skill*/
 .skillContent{
-  padding: 100px 0 60px;
+  padding: 150px 0 60px;
 }
 .skillContent > h2{
   text-align: center;
@@ -187,7 +187,7 @@ section{
 /*-----------------------------------------------*/
 /*section : portpolio*/
 .portpolioContent{
-  padding: 100px 0 60px;
+  padding: 150px 0 60px;
 }
 .portpolioContent > h2{
   text-align: center;
@@ -197,7 +197,7 @@ section{
 /*section : contace*/
 #portpolio{height: 100%;}
 .contactContent{
-  padding: 100px 0 60px;
+  padding: 150px 0;
 }
 .contactContent > h2{
   text-align: center;
@@ -229,11 +229,11 @@ section{
   height: 320px;
   background-color: #ccc;
   overflow: hidden;
-  transition: all .5s;
+  transition: all .3s;
   overflow: hidden;
   object-fit: cover;
   border: 1px solid #ccc;
-  filter: grayscale(40%);
+  filter: grayscale(75%);
 }
 .pp-img:hover{
   filter: grayscale(0);
@@ -326,4 +326,73 @@ section{
   border-radius: 5px;
   border: 1px solid red;
   box-shadow: 5px 5px #ccc;
+}
+
+/*-----------------------------------------------*/
+/*section : contact*/
+#contact{height: 100%;}
+.contactContent{
+  width: 100%;
+  height: 100%;
+}
+.contact{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin-top: 150px;
+}
+.contact > p{
+  margin: 20px 0;
+  color: #333;
+  font-size: 17px;
+}
+.contact > .tit{
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.liaison{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: 60px;
+  margin-top: 70px;
+  border: 1px solid blue;
+}
+.liaison > .emailTxt{
+  color: #333;
+  font-size: 17px;
+}
+
+.btn-motion6{
+  margin-top: 50px;
+}
+.btn-motion6 > span{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000; 
+  transform: rotate(-45deg); 
+  animation: btn-motion6 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+.btn-motion6 span:nth-of-type(1) {animation-delay: 0s;}
+.btn-motion6 span:nth-of-type(2) {top: 16px;animation-delay: .15s;}
+.btn-motion6 span:nth-of-type(3) {top: 32px; animation-delay: .3s;}
+
+@keyframes btn-motion6 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
