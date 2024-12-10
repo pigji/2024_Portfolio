@@ -522,8 +522,20 @@ a{color: #fff; text-decoration: none;}
 }
 
 /*더보기 영역*/
-.loadMore{}
-.loadMore .loadMoreBt{}
+.loadMore{
+  width: 100%;
+  padding: 80px 0;
+  text-align: center;
+  background-color: #132d30;
+}
+.loadMore .loadMoreBt{
+  cursor: pointer;
+  width: 200px;
+  height: 45px;
+  background-color: #384244;
+  color: #dee4e3;
+  border: 1px solid #5e686a;
+}
 
 /*--------------------- 미디어쿼리 ---------------------*/
 /*상단메뉴 : 상단 메뉴를 슬라이드 메뉴창으료 표현*/
