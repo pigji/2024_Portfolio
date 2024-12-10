@@ -17,3 +17,17 @@ closeBt.on({click:function(){
   });
   mobileMenuBar.stop().animate({left: 0}, 500);
 }})
+
+/*------------------------------------------------------*/
+//변수 생성
+const TrandingWrap = document.querySelector('.tranding-wrap');
+let offset = TrandingWrap.getBoundingClientRect().left;
+
+TrandingWrap.addEventListener('mousemove', function(e){
+  if(e.pageX >= window.innerWidth - 100){
+    return false
+  }
+  else{
+    TrandingWrap.style.left = -(e.pageX - offset) + 'px';
+  }
+})

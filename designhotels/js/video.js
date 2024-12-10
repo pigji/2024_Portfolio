@@ -1,24 +1,24 @@
 function videoResizeFn(){
-  let winW = window.innerWidth;
-  let winH = window.innerHeight;
-  let vidH = document.getElementById('mainvideo').clientHeight;
-  let vidW = document.getElementById('mainVideo').clientWidth;
+  let winW=window.innerWidth;
+  let winH=window.innerHeight;
+  let vidH=document.getElementById('mainVideo').clientHeight;
+  let vidW=document.getElementById('mainVideo').clientWidth;
 
-  document.querySelector('.m-video').style.width = "100%";
-  document.querySelector('.m-video').style.height = winH + 'px';
+  document.querySelector('.m-video').style.width="100%";
+  document.querySelector('.m-video').style.height=winH + 'px';
 
   if(winH > vidH){
-    document.getElementById('mainvideo').style.width = "auto";
-    document.getElementById('mainvideo').style.height = winH + 'px';
+    document.getElementById('mainVideo').style.width="auto";
+    document.getElementById('mainVideo').style.height=winH + 'px';
   }
   if(winW > vidW){
-    document.getElementById('mainvideo').style.width = winW + 'px';
-    document.getElementById('mainvideo').style.height = winH + 'auto';
+    document.getElementById('mainVideo').style.width=winW+'px';
+    document.getElementById('mainVideo').style.height='auto';
   }
 }
 
 window.addEventListener('resize', videoResizeFn);
-videoResizeFn;
+videoResizeFn();
 
 
 
@@ -91,3 +91,30 @@ document.addEventListener('keypress', function(e){
     }
   }
 });
+
+/*------------------------------------------------------*/
+//again
+//변수 생성
+let setId = setInterval(function(){
+  if(mainVideo.ended){
+    document.querySelector('.m-again').style.display = 'block';
+    videoPlay = 'off';
+    document.querySelector('.pauseIcon i').className = 'fas fa-play';
+    clearInterval(setId)
+  }
+}, 100); //0.01초 마다 실행
+
+//replay 비디오
+document.querySelector('.m-again').addEventListener('click', function(){
+  videoPlay = 'on';
+  mainVideo.play();
+  document.querySelector('.ppauseIcon i').className = 'fas fa-pause';
+})
+
+/*------------------------------------------------------*/
+//다음 섹션으로 이동
+let nextTop = document.querySelector('#section2').offsetTop;
+//console.log(nextTop); //높이 확인
+document.querySelector('.nextIcon').addEventListener('click', function(){
+  window.scrollTo({top: nextTop, behavior: 'smooth'});  //스무스(부드럽게) 이동
+})

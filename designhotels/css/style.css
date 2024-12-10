@@ -2,6 +2,15 @@ html{height: 100%;}
 body{background: #222; color: #fff; height: 100%;}
 a{color: #fff; text-decoration: none;}
 #wrap{height: 100%;}
+.ir_so{
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -99999em;
+  position: absolute;
+}
 
 /*-----------------------------------------------------*/
 /*모바일메뉴*/
@@ -273,6 +282,7 @@ a{color: #fff; text-decoration: none;}
   background-color: rgba(100, 116, 117, 0.7);
   text-align: center;
   transform: translate(-50%, -50%); /*가운데 위치하도록 설정*/
+  display: none;
 }
 #section1 .m-again h3{
   height: 200px;
@@ -333,17 +343,203 @@ a{color: #fff; text-decoration: none;}
   background-color: rgba(100, 116, 117, 0.7);
   color: #fff;
 }
-#section1 .m-icon-footer > div > ul > li > span{}
-#section1 .m-icon-footer > div > ul > li > span > a{}
+/*-----------------------------------------------------*/
+/*section2*/
+#section2{
+  width: 100%;
+  background-image: linear-gradient(to right, #384144, #384144 50%, #727b22 50%);
+}
+#section2 ul{display: flex;}
+#section2 ul li{flex-basis: 50%;} /*간격설정*/
+#section2 ul li > div{padding: 70px 80px;}
+#section2 ul li > div .section2-title{padding-bottom: 30px;}
+#section2 ul li > div .section2-title h2{
+  font-size: 24px; 
+  font-weight: bold;
+  padding: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+}
 
+#section2 ul li > div .section2-content p{
+  line-height: 1.4;
+  text-align: justify;
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/*-----------------------------------------------------*/
+/*section3*/
+#section3{
+  width: 100%;
+  padding: 100px 0;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden; /*넘어가는 부분 가려줌*/
+}
+#section3 > div{
+  width: 100%;
+}
+#section3 > div h2{
+  text-align: center;
+  font-size: 24px;
+  color: #9f9999;
+  margin-bottom: 50px;
+}
+
+#section3 > div .tranding-wrap{
+  width: 100%;
+  position: relative;
+  height: 362px;
+}
+#section3 > div .tranding-wrap ul{
+  width: calc(290px * 12);
+  display: flex;
+  flex-flow: row nowrap;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+#section3 > div .tranding-wrap ul li{
+  width: 290px;
+  height: 100%;
+}
+/*이미지요소*/
+#section3 > div .tranding-wrap ul li img{
+  width: 100%;
+}
+
+/*-----------------------------------------------------*/
+/*section4*/
+.section4{width: 100%;}
+.section4 .page-tab{
+  word-break: 100%;
+  height: 50px;
+  background-color: #2c3437;
+}
+.section4 .page-tab .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.filter-form .form-item input{
+  display: none;
+}
+.filter-form .form-item input:checked ~ label{
+  background-color: #262626;
+  color: rgba(255, 255, 255, 0.8);
+}
+.filter-form .form-item label{
+  padding: 13px 30px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.gallery{}
+.gallery .gallery-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow: hidden;
+}
+.gallery .gallery-wrap li{
+  flex-basis: 33.3333%;
+  overflow: hidden;
+  position: relative;
+  height: 541px;
+}
+.gallery .gallery-wrap li div{
+  width: 100%;
+
+}
+.gallery .gallery-wrap li div a{
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+/* 비디오 < 배경색 < 텍스트 순으로 쌓아올림*/
+.gallery .gallery-wrap li div a .g-video{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: block;
+}
+/*비디오, 이미지 크기설정*/
+.gallery .gallery-wrap li div a .g-video video,
+.gallery .gallery-wrap li div a .g-video img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: 0.3s;
+  transform: scale(1);
+}
+.gallery .gallery-wrap li div a:hover .g-video video,
+.gallery .gallery-wrap li div a:hover .g-video img{
+  transform: scale(1.2);
+}
+.gallery .gallery-wrap li div a .g-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.3s;
+  display: block;
+}
+.gallery .gallery-wrap li div a:hover .g-bg{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.gallery .gallery-wrap li div a .g-title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 0;
+}
+.gallery .gallery-wrap li div a:hover .g-title{
+  opacity: 1;
+}
+.gallery .gallery-wrap li div a .g-title span{
+  display: block;
+  padding-bottom: 20px;
+  margin-top: 15px;
+}
+.gallery .gallery-wrap li div a .g-title > span > strong{
+  color: #fff;
+  font-size: 21px;
+  font-weight: bold;
+}
+.gallery .gallery-wrap li div a .g-title span > b{
+  font-size: 14px;
+}
+.gallery .gallery-wrap li div a .g-title span > .exploreBt{
+  color: #fff;
+}
+
+/*더보기 영역*/
+.loadMore{}
+.loadMore .loadMoreBt{}
 
 /*--------------------- 미디어쿼리 ---------------------*/
-/*상단메뉴*/
+/*상단메뉴 : 상단 메뉴를 슬라이드 메뉴창으료 표현*/
 @media screen and (max-width: 1090px) {
   .header-pc-menu-wrap{display: none;}
   .header-mobile-menu-wrap{display: block;}
 }
-/**/
+
+/*section2 : flex되어 있는 속성으로 줄바꿈 시켜서 2줄로 표현*/
+@media screen and (max-width: 1090px){
+  #section2{width: 100%; background-image: none;}
+  #section2 ul{flex-wrap: wrap;}
+  #section2 ul li{flex-basis: 100%;}
+  #section2 ul li:first-child{background: #384144;}
+  #section2 ul li:last-child{background: #727b22;}
+}
 /**/
 /**/
 
