@@ -10,6 +10,7 @@ i, li{cursor: pointer;}
 
 a{text-decoration: none; color: inherit;}
 body{margin: 0 auto; min-width: 1000px;}
+html {scroll-behavior: smooth;}
 /*-----------------------------------------------*/
 /*공통속성 : container*/
 .container {
@@ -357,11 +358,27 @@ section{
   position: relative;
   padding-top: 60px;
   margin-top: 70px;
-  border: 1px solid blue;
 }
-.liaison > .emailTxt{
+.myInformation{
+  width: 400px;
+  margin: 0 auto;
+}
+.myInformation > .emailTxt{
   color: #333;
   font-size: 17px;
+  margin: 10px 0;
+}
+.myInformation > .link{
+  display: flex;
+  margin-top: 30px;
+}
+.myInformation > .link > a{
+  margin: 50px 30px;
+  color: #333;
+  padding-bottom: 5px;
+}
+.myInformation > .link > a:hover{
+  border-bottom: 1px solid #333;
 }
 
 .btn-motion6{
