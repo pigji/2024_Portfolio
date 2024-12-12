@@ -20,6 +20,7 @@
 .in h2, .in h1{
   text-align: center;
 }
+
 .row{
   max-width: 1200px; 
   width: 100%; 
@@ -50,7 +51,8 @@
   text-align: center;
 }
 .detail .col img{
-  width: 80%;
+  width: 600px;
+  height: 600px;
 }
 
 .detail .row{
@@ -71,4 +73,57 @@
   color: #333;
   cursor: pointer;
   padding: 10px;
+}
+
+.cards-container{
+  max-width: 1200px; 
+  width: 100%; 
+  margin: 10px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.cards-container a{
+  text-decoration: none;
+  color: #333;
+  width: 32%;
+  margin: 0 7px;
+}
+
+/*--------------------------------------*/
+.cartTable{
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.cartTable table{
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+.cartTable table tr{}
+.cartTable table tr th{
+  border: 1px solid #ddd;
+  padding: 5px 20px;
+  font-size: 14px;
+}
+.cartTable table tr th:nth-child(1){
+  width: 10%;
+}
+.cartTable table tr th:nth-child(2){
+  width: 70%;
+}
+.cartTable table tr th:nth-child(3){
+  width: 10%;
+}
+.cartTable table tr th:nth-child(4){
+  width: 10%;
+}
+.cartTable table tr td{
+  border: 1px solid #ddd;
+  padding: 5px 20px;
+  font-size: 14px;
+  text-align: center;
 }

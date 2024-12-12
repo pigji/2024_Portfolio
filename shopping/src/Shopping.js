@@ -11,6 +11,7 @@ import Aaa from './page/Aaa';
 import Bbb from './page/Bbb';
 import Not from './page/Not';
 import data from './data.js';
+import Cart from './page/Cart.jsx';
 
 const DataContext = createContext();
 
@@ -31,6 +32,7 @@ const Shopping = () => {
           </Route>
           <Route path="/best" element={<Best />} />
           <Route path="*" element={<Not />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </div>
     </DataContext.Provider>

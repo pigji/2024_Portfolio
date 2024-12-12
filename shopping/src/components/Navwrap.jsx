@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link/* , useNavigate  */} from 'react-router-dom';
 import "./Navwrap.module.css"
 import { AiFillAliwangwang } from "react-icons/ai";
-import { LiaAnkhSolid } from 'react-icons/lia';
+/* import { LiaAnkhSolid } from 'react-icons/lia'; */
 
 
 const Navwrap= () => {
@@ -60,9 +60,6 @@ const Navwrap= () => {
                 <Link to="/new/bbb">지갑</Link>
               </li>
             </ul>
-          </li>
-          <li>
-            <Link to="/detail">Detail</Link>
           </li>
         </ul>
       </nav>
