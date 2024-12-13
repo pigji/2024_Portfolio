@@ -12,6 +12,7 @@ import Bbb from './page/Bbb';
 import Not from './page/Not';
 import data from './data.js';
 import Cart from './page/Cart.jsx';
+import Footer from './components/Footer.jsx';
 
 const DataContext = createContext();
 
@@ -34,6 +35,7 @@ const Shopping = () => {
           <Route path="*" element={<Not />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
+        <Footer />
       </div>
     </DataContext.Provider>
   );
