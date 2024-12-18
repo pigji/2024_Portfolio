@@ -1,58 +1,82 @@
 /*초기화*/
-*{margin: 0; padding: 0; box-sizing: border-box;}
-ul, li{list-style: none;}
-a{text-decoration: none; color: inherit;}
-body{color: #222;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  color: #222;
+}
 
-.container{
+.container {
   width: 1400px;
   height: 100%;
   margin: 0 auto;
 }
 
 /*------------------Header---------------------*/
-header{
+header {
   width: 100vw;
   height: 100%;
 }
-.nav{
+.nav {
   width: 100%;
   height: 100%;
   padding: 10px;
+
 }
 
-.join{
-  background-color: rgb(201, 201, 176);
+.join {
   color: #444;
+  position: relative;
 }
-.join > ul{
+.join > ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding-top: 10px;
 }
-.join > ul > li{
-  margin: 0 10px;
+.join > ul > li {
+  font-size: 13px;
+  border-right: 1px solid #ddd; /*구분선*/
+  padding: 0 20px;
+  height: 15px;
+  display: block;
+  line-height: 13px;
+}
+/*마지막요소 구분선 제거*/
+.join > ul > li:last-child{
+  border: none;
 }
 
-.subJoin{
+.subJoin {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 /*로고*/
-.logo{
+.logo {
   width: 240px;
   height: auto;
 }
+
 /*검색창*/
-.searchBox{
+.searchBox {
   display: flex;
   align-items: center;
   margin-left: 100px;
-  margin-right: 150px;
+  margin-right: 230px;
 }
-.search{
+.search {
   width: 450px;
   height: 45px;
   border: 2px solid #2d64ff;
@@ -61,80 +85,141 @@ header{
   display: flex;
   justify-content: space-between;
 }
-.search > input{
+.search > input {
   background-color: transparent;
   border: none;
   outline: none;
 }
-.search > i{
+.search > i {
   font-size: 18px;
 }
 
-.subJoinMenu{}
-.subJoinMenu > ul{
+.subJoinMenu {
+}
+.subJoinMenu > ul {
   display: flex;
   align-items: center;
 }
-.subJoinMenu > ul > li{
+.subJoinMenu > ul > li {
   text-align: center;
-  width: 80px;
-  margin: 0 5px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.subJoinMenu > ul > li > p{
+  font-size: 12px;
 }
 
-/**/
-.navMenu{
+/*메뉴창 + 서브메뉴*/
+.navMenu {
   width: 100%;
-  height: 100%;
-  margin: 10px auto;
+  margin: 10px auto 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 .navMenu > ul {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+/* .navMenu > ul > li:hover{
+  background-color: #6b92fc;
+} */
+
 .navMenu > ul > li {
   position: relative;
   color: #333;
   font-weight: 500;
   text-align: center;
 }
+.navMenu > ul > li:first-child {
+  background-color: #ccc;
+}
 .navMenu > ul > li > a {
   display: block;
-  width: 125px;
+  width: 150px;
   height: 50px;
   line-height: 45px;
   transition: all 0.2s;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+
 }
 .navMenu > ul > li > a:hover {
-  background-color: #56af4d;
+  background-color: #dde6ff;  /*색상 변경예정*/
 }
+
+/**/
 .navMenu > ul > li > ul {
   position: absolute;
   left: 0;
   top: 50px;
-  background-color: #ccc;
+  background-color: #2d64ff;
   width: 100%;
   display: none;
+}
+.navMenu > ul > li > ul > li{
+  width: 150px;
+  color: #fff;
 }
 .navMenu > ul > li > ul > li > a {
   padding: 10px;
   display: block;
   transition: all 0.2s;
+  font-size: 14px;
 }
 .navMenu > ul > li > ul > li > a:hover {
-  background-color: #eafcbb;
+  color: red; /*확인용 - 색상변경 예정*/
+  width: 150px;
 }
 
-
-
-
-.navMenu > ul{
+.navMenu > ul {
   display: flex;
   align-items: center;
 }
-/*------------------Bus------------------------*/
+
+/*슬라이드 배너*/
+.banner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.bannerBox{
+  position: relative;
+  width: 100%;
+  height: 550px;
+}
+.bannerBox img{
+  position: absolute;
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.bannerBox .leftPlus{
+  left: 100%;
+  transition: none;
+}
+.bannerBox .left0{
+  left: 0;
+}
+/*------------------main------------------------*/
+/*버스여행*/
+main{
+  width: 100vw;
+  height: 100%;
+  padding: 50px 0 10px 0;
+}
+.bus-trip{
+  width: 100%;
+  height: 600px;
+  background-color: #ccc;
+}
+/*버스여행*/
+/*버스여행*/
+/*버스여행*/
+/*버스여행*/
+
+
+
 /*------------------Popularity-----------------*/
 /*------------------Best-----------------------*/
 /*------------------Food-----------------------*/
