@@ -5,6 +5,7 @@ import Footer from './components/Footer';	//footer
 import Home from './pages/Home';	//main페이지
 import Movies from './pages/Movies';
 import Users from './pages/Users';
+import User from './components/User';	//Users의 상세 페이지
 import Event from './pages/Event';
 import Movie from './pages/Movie';
 import Comming from './pages/Comming';	//예정작 상세페이지
@@ -24,6 +25,7 @@ function App() {
 			<Route path="/movies/:id" element={<Movie />}  />
 			<Route path="/comming/:id" element={<Comming />}  />
 			<Route path="/users" element={<Users />}  />
+			<Route path="/users/:id" element={<User />}  />
 			<Route path="/event" element={<Event />}  />
 			<Route path="/search/:movieId" element={<SearchDetail />}  />
 		</Routes>

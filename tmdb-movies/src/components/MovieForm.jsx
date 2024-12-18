@@ -12,15 +12,38 @@ const MovieForm = ({addMovie}) => {
     setMovieYear("");
   }
 
+  //영화 제목과 개봉일을 입력하지 않고 등록할 경우 오류 안내글 출력
+  const validateForm = () => {
+    resetError();
+    let validated = true;
+    if(!movieTitle){  //제목을 입력하지 않으면 오류 안내글 출력
+      setTitleError("영화 제목을 입력해주세요.");
+      validated = false;
+    }
+    if(!movieYear){  //개봉일을 입력하지 않으면 오류 안내글 출력
+      setYearError("개봉일을 입력해주세요.");
+      validated = false;
+    }
+    return validated;
+  }
+
+  //
+  const resetError = () => {
+    setTitleError("");
+    setYearError("");
+  }
+
   //입력한 내용 전송[출력]
   const onSubmit = (e) => {
     e.preventDefault(); //active창으로 가려는 자동기능 제거
-    
-    addMovie({
-      id: Date.now(),
-      title: movieTitle,
-      year: movieYear
-    })
+    if(validateForm()){
+      addMovie({
+        id: Date.now(),
+        title: movieTitle,
+        year: movieYear
+      })
+    }
+
     //실행
     restForm();
   };
@@ -37,6 +60,7 @@ const MovieForm = ({addMovie}) => {
           }}
         />
         <br />
+        <div className="error">{titleError}</div>
         <input
           type="date"
           placeholder="연도를 입력해주세요."
@@ -46,6 +70,7 @@ const MovieForm = ({addMovie}) => {
           }}
         />
         <br />
+        <div className="error">{yearError}</div>
         <button type="submit">영화 추가하기</button>
       </form>
     </div>
