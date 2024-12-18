@@ -10,7 +10,7 @@ function slide(){
 
   //현재 보이는 이미지는 왼쪽으로 이동시킴
   boxImgs[i].className = 'leftMinus400';
-  //다음 이미지를 .banner의 오른쪽 밖에에서 왼쪽 밖으로 이동
+  //다음 이미지를 .banner의 오른쪽 밖에서 왼쪽 밖으로 이동
   boxImgs[(i+1) % boxImgs.length].classList = 'left0';
   i++;
 }

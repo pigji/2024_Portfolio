@@ -1,14 +1,15 @@
 import {Routes, Route} from 'react-router-dom';
 import './App.scss';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
+import Navbar from './components/Navbar';	//상단 nav메뉴바
+import Footer from './components/Footer';	//footer
+import Home from './pages/Home';	//main페이지
 import Movies from './pages/Movies';
 import Users from './pages/Users';
 import Event from './pages/Event';
 import Movie from './pages/Movie';
-import Comming from './pages/Comming';
-import SearchDetail from './pages/SearchDetail';
+import Comming from './pages/Comming';	//예정작 상세페이지
+import SearchDetail from './pages/SearchDetail';	//검색
+import QuicBtn from './components/QuicBtn';	//최상단으로 이동하는 버튼
 
 
 
@@ -27,6 +28,7 @@ function App() {
 			<Route path="/search/:movieId" element={<SearchDetail />}  />
 		</Routes>
 		<Footer />
+		<QuicBtn />
     </div>
   );
 }
