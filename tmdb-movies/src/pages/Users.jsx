@@ -6,6 +6,11 @@ const Users = () => {
   //users를 담을 배열생성
   const [users, setUsers] = useState([]);
   const [modal, setModal] = useState(false); //처음에 눈에 안보이게 하도록 false를 초기값으로 설정
+  const [selectedUser, setSelectedUser] = useState(null); //클릭한 사용자 정보 저장
+
+  const userInfo = (info) => {
+    setSelectedUser(info);
+  }
   
   useEffect(() => {
     axios.get(`https://jsonplaceholder.typicode.com/users`) //axios로 데이터 가져오기
@@ -21,28 +26,26 @@ const Users = () => {
       <h2>User List</h2>
       {
         users.map( user => (
-          <div className='userCard'>
+          <div className='userCard' onClick={(e) => {e.stopPropagation(); userInfo(user)}}>
             {/* <Link to={`users/${user.id}`}>{user.name}</Link> */}
             <div className='active' onClick={() => {setModal(!modal)}}>{user.name}</div>
           </div>
         ))
       }
       {
-        modal === true ? <Modal users={users}/> : null
+        modal === true ? <Modal userInfo={selectedUser}/> : null
       }
     </div>
   );
 };
 
 //모달창 생성
-function Modal({userUbfi}){
+function Modal({userInfo}){
   return(
     <div className='modal'>
-      <p>이메일</p>
-      <p>핸드폰</p>
-      <p>웹사이트</p>
-
-      <button ></button>
+      <p>{userInfo.name}</p>
+      <p>{userInfo.phone}</p>
+      <p>{userInfo.website}</p>
     </div>
   )
 }

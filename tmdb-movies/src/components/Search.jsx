@@ -6,6 +6,9 @@ import SearchDetail from '../pages/SearchDetail';
 
 
 const Search = () => {
+  //env를 사용하기 위해 만듦.
+  const APIKEY = process.env.REACT_APP_API_KEY;
+
   //js코드 작성
   const imgPath = 'http://image.tmdb.org/t/p/original'; //TMDB 이미지 경로
 
@@ -27,7 +30,7 @@ const Search = () => {
   //입력처리와 영화를 검색하기 위한 함수
   const search = () => {
     //기본문법 : axios.get().then(() => {}).catch(() => {})
-    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=546c72b99cf64514c2c03c7ef473011b&language=ko&page=1&include_adult=false&query=${searchWord}`) //요청하는 경로(주소)
+    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${APIKEY}&language=ko&page=1&include_adult=false&query=${searchWord}`) //요청하는 경로(주소)
     .then((response) =>{  //요청한 값이 반환되었을때(성공했을때)
       console.log(response.data.results) //검색한 영화데이터 출력
       setMovies(response.data.results)

@@ -4,6 +4,9 @@ import { useParams } from 'react-router-dom'; //URL 주소에 있는 파라미�
 import './SearchDetail.scss';
 
 const SearchDetail = () => {
+  //env를 사용하기 위해 만듦.
+  const APIKEY = process.env.REACT_APP_API_KEY;
+
   const {movieId} = useParams();  //각각이 아이디값
   const [detailInfo, setDetailInfo] = useState({});  //선택된 영화의 상세정보 데이터를 받아옴
   const [actors, setActors] = useState([]); //선택된 영화의 출연배우 정보를 저장
@@ -12,7 +15,7 @@ const SearchDetail = () => {
   const fetchMovieDetails = async () => {
 
     try{
-      const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=546c72b99cf64514c2c03c7ef473011b&language=ko`);
+      const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${APIKEY}&language=ko`);
       setActors(response.data.cast)
       console.log(response.data.cast) //정보 출력
     }
@@ -21,7 +24,7 @@ const SearchDetail = () => {
     }
 
     try{
-      const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=546c72b99cf64514c2c03c7ef473011b&language=ko`);
+      const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${APIKEY}&language=ko`);
       setDetailInfo(response.data)
       console.log(response.data)
     }

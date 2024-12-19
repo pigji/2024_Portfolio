@@ -3,12 +3,15 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 const Movie = () => {
+  //env를 사용하기 위해 만듦.
+  const APIKEY = process.env.REACT_APP_API_KEY;
+
   const {id} = useParams();
   const [isLoading, setLoading] = useState(true);
   const [m, setM] = useState(null);
 
   useEffect(()=>{
-    axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=546c72b99cf64514c2c03c7ef473011b&language=ko`)
+    axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${APIKEY}&language=ko`)
     .then(res=>{
       console.log(res)
       setM(res.data);

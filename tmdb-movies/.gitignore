@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#GitHub에 올라가는 API key 가려줌[업로드 하지 말라고 설정]
+.env
