@@ -15,11 +15,16 @@ a {
 body {
   color: #222;
 }
+section {
+  width: 100vw;
+  height: 100%;
+}
 
 .container {
-  width: 1400px;
+  width: 1500px;
   height: 100%;
   margin: 0 auto;
+  border: 1px solid black;
 }
 
 /*------------------Header---------------------*/
@@ -31,7 +36,6 @@ header {
   width: 100%;
   height: 100%;
   padding: 10px;
-
 }
 
 .join {
@@ -53,7 +57,7 @@ header {
   line-height: 13px;
 }
 /*마지막요소 구분선 제거*/
-.join > ul > li:last-child{
+.join > ul > li:last-child {
   border: none;
 }
 
@@ -65,7 +69,7 @@ header {
 }
 /*로고*/
 .logo {
-  width: 240px;
+  width: 100%;
   height: auto;
 }
 
@@ -79,7 +83,7 @@ header {
 .search {
   width: 450px;
   height: 45px;
-  border: 2px solid #2d64ff;
+  border: 3px solid #2d64ff;
   border-radius: 10px;
   padding: 10px;
   display: flex;
@@ -94,19 +98,21 @@ header {
   font-size: 18px;
 }
 
-.subJoinMenu {
-}
 .subJoinMenu > ul {
   display: flex;
   align-items: center;
 }
 .subJoinMenu > ul > li {
+  width: 65px;
   text-align: center;
   margin: 0 10px;
   cursor: pointer;
 }
-.subJoinMenu > ul > li > p{
-  font-size: 12px;
+.subJoinMenu > ul > li > p {
+  font-size: 14px;
+}
+.subJoinMenu > ul > li > p:hover{
+  color: #2d64ff;
 }
 
 /*메뉴창 + 서브메뉴*/
@@ -141,10 +147,9 @@ header {
   height: 50px;
   line-height: 45px;
   transition: all 0.2s;
-
 }
 .navMenu > ul > li > a:hover {
-  background-color: #dde6ff;  /*색상 변경예정*/
+  background-color: #dde6ff; /*색상 변경예정*/
 }
 
 /**/
@@ -155,8 +160,9 @@ header {
   background-color: #2d64ff;
   width: 100%;
   display: none;
+  z-index: 999;
 }
-.navMenu > ul > li > ul > li{
+.navMenu > ul > li > ul > li {
   width: 150px;
   color: #fff;
 }
@@ -182,46 +188,361 @@ header {
   height: 100%;
   overflow: hidden;
 }
-.bannerBox{
+.bannerBox {
   position: relative;
   width: 100%;
   height: 550px;
 }
-.bannerBox img{
+.bannerBox img {
   position: absolute;
   transition: all 0.3s;
   width: 100%;
   height: 100%;
   cursor: pointer;
 }
-.bannerBox .leftPlus{
+.bannerBox .leftPlus {
   left: 100%;
   transition: none;
 }
-.bannerBox .left0{
+.bannerBox .left0 {
   left: 0;
 }
 /*------------------main------------------------*/
 /*버스여행*/
-main{
+main {
   width: 100vw;
   height: 100%;
-  padding: 50px 0 10px 0;
+  padding: 20px 0 10px 0;
+  margin-bottom: 30px;
 }
-.bus-trip{
+.bus-trip {
+  width: 1400px;
+  height: 650px;
+  position: relative;
+}
+
+.busBox {
+}
+.busPick {
+  width: 500px;
+  height: 650px;
+  position: absolute;
+  top: 5%;
+}
+.busPick > img {
   width: 100%;
-  height: 600px;
-  background-color: #ccc;
+  height: 100%;
+  cursor: pointer;
 }
-/*버스여행*/
-/*버스여행*/
-/*버스여행*/
-/*버스여행*/
 
+.busSubPick {
+  width: 990px;
+  height: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 23%;
+  right: 60px;
+  z-index: 10;
+}
 
+/*버스패키지 요소 1개 css*/
+.busPackage {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0 20px;
+  box-shadow: 10px 5px 5px #eee; /*색상변경 예정*/
+}
+.busPackage > .busPackageImg {
+  width: 310px;
+  height: 240px;
+  cursor: pointer;
+}
+.busPackage > .busPackageImg > img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.busPackageData {
+  width: 100%;
+  height: 200px;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 10px 5px 5px #888; /*색상변경 예정*/
+}
+.busPackageTitle {
+  width: 100%;
+  margin-top: 10px;
+}
+.busPackageTitle > p {
+  width: 100%;
+  color: #888;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.busPackageTitle > strong {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  color: #333;
+  font-weight: bold;
+  line-height: 140%;
+}
+
+.busPackageprice {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.busPackageprice > .busNum {
+  color: #9553c3;
+  font-weight: 600;
+  font-size: 14px;
+}
+.busPackageprice .price {
+  font-size: 17px;
+  font-weight: bold;
+}
+.busPackageprice .price > strong {
+  font-size: 26px;
+}
 
 /*------------------Popularity-----------------*/
-/*------------------Best-----------------------*/
+.Popularity {
+  text-align: center;
+  background-color: #fff;
+  padding: 70px 0 40px 0;
+}
+.Popularity > h3 {
+  font-size: 32px;
+}
+.Popularity > h3 > img {
+  vertical-align: middle;
+}
+
+.PopularityBox {
+  width: 100%;
+  height: 100%;
+}
+.PopularityBox > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.PopularityBox > ul > li {
+  width: 380px;
+  height: 400px;
+  margin:  45px 30px;
+}
+
+.PopularityPackageImg {
+  width: 100%;
+  height: 280px;
+}
+.PopularityPackageImg > img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/*텍스트 요소 : 정보*/
+.PopularityPackageData {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  background-color: #fff;
+  height: 150px;
+  text-align: left;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.PopularityPackageTitle{
+  width: 100%;
+  height: 85px;
+  font-size: 18px;
+}
+
+/*상품번호 + 가격*/
+.PopularityPackageprice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 5px;
+}
+.PopularityPackageprice > .ppNum{
+  color: #9553c3;
+  font-weight: 600;
+  font-size: 14px
+}
+.PopularityPackageprice > .price{
+  font-size: 17px;
+  font-weight: bold;
+}
+.PopularityPackageprice > .price > strong{
+  font-size: 26px;
+  color: #333;
+}
+
+/*여행추천 배너이미지*/
+.travelRecommendation{
+  width: 100%;
+  height: 100%;
+  margin: 30px auto;
+}
+.trImg{
+  width: 100%;
+  height: 280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.trImgbanner1{
+  width: 100%;
+  height: 100%;
+  background-color: #ffcd2e;
+  text-align: right;
+}
+.trImgbanner1 > img,
+.trImgbanner2 > img
+{
+  width: 730px;
+  height: 100%;
+  cursor: pointer;
+}
+.trImgbanner2{
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  background-color: #b299ff;
+}
+/*------------------Best`-----------------------*/
+.best-season{
+  width: 100%;
+  height: 100%;
+  background-color: #888;
+  margin: 0 auto;
+}
+
+.tab_menu {
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.tab_menu button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 20px 30px;
+  transition: 0.3s;
+}
+.tab_menu button:hover {
+  background-color: #ddd;
+}
+.tab_menu button.on{
+  background-color:#ccc;
+  font-weight:bold;
+}
+
+.tab_list > div{
+  /* display:none; */
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.tab_list > div.on{
+  display:block;
+}
+
+
+
+.bestBox {
+  width: 100%;
+  height: 100%;
+}
+.bestBox > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.bestBox > ul > li {
+  width: 380px;
+  height: 400px;
+  margin:  45px 30px;
+}
+.best-seasonImg {
+  width: 100%;
+  height: 280px;
+}
+.best-seasonImg > img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+/*텍스트 요소 : 정보*/
+.best-seasonData {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  background-color: #fff;
+  height: 150px;
+  text-align: left;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.best-seasonTitle{
+  width: 100%;
+  height: 85px;
+  font-size: 18px;
+}
+
+/*상품번호 + 가격*/
+.best-seasonPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 5px;
+}
+.best-seasonPrice > .bsNum{
+  color: #9553c3;
+  font-weight: 600;
+  font-size: 14px
+}
+.best-seasonPrice > .price{
+  font-size: 17px;
+  font-weight: bold;
+}
+.PopularityPackageprice > .price > strong{
+  font-size: 26px;
+  color: #333;
+}
+
 /*------------------Food-----------------------*/
 /*------------------Footer---------------------*/
 /*-----------------미디어쿼리------------------*/
+@media screen and (min-width: 1024px) {
+  /* pc */
+}
+@media screen and (min-width: 768px) {
+  /* 태블릿 */
+}
+@media screen and (min-width: 480px) {
+  /* 모바일 */
+}

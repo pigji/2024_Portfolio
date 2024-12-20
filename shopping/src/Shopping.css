@@ -28,14 +28,19 @@ a{text-decoration: none; color: #222;}
 .row{
   max-width: 1200px; 
   width: 100%; 
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 0 20px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+.col{
+  width: 33.3333%;
+  padding: 15px 10px;
 }
 
-
+/*card페이지*/
 .price{
   font-weight: bold;
 }

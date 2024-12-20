@@ -1,10 +1,10 @@
-// import React, { useState } from 'react';
-// import data from '../data.js';
+import React, { useState } from 'react';
+import data from '../data.js';
 import Card from '../Card.jsx';
 import Today from '../components/Today.jsx';
 
 const Main = () => {
-  // let [shopping]=useState(data);
+  let [shopping]=useState(data);
   return (
     <div>
       {/*  <div className="main-bg" style={{backgroundImage:'url('+bg+')'}}></div>
@@ -28,10 +28,9 @@ const Main = () => {
             {/*  <Card  shopping={shopping[0]} i={1}/>
             <Card  shopping={shopping[1]} i={2}/>
             <Card  shopping={shopping[2]} i={3}/> */}
-            {/* {shopping.map((item, idx) => {
+            {shopping.map((item, idx) => {
               return <Card shopping={shopping[idx]} i={idx + 1} key={idx} />;
-            })} */}
-            <Card />
+            })}
           </div>
         </div>
         <Today />
