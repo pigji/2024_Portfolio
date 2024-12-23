@@ -36,3 +36,21 @@ function slide(){
 
 /*------------------------------------------------------------------------*/
 //3. 베스트시즌 Tab메뉴 구현
+const tabMenus = document.querySelectorAll(".tab_menu > button");  //버튼요소 리스트 선택
+console.log(tabMenus);
+const tabLists = document.querySelectorAll(".tab_list > div");
+console.log(tabLists)
+
+//모든 버튼을 순회하면서 클릭이벤트를 추가(이벤트가 발생한 요소, 이벤트가 발생된 요소의 인텍스)
+tabMenus.forEach((tabMenu, idx) => tabMenu.addEventListener("click", () => {
+    //버튼의 갯수만큼 반복실행(tabMenus)
+    for(let i=0; i < tabMenus.length; i++){
+        //모든 버튼과 리스트요소에 클래스를 제거
+        tabMenus[i].classList.remove("on");
+        tabLists[i].classList.remove("on");
+    }
+    //클릭한 버튼의 on클래스 추가
+    tabMenu.classList.add("on");
+    //클릭한 버튼과 같은 순번의 리스트요소에 on클래스를 추가
+    tabLists[idx].classList.add("on");
+}))
