@@ -1,4 +1,23 @@
 //1. 상단 서브메뉴
+//사이드바(아이콘 클릭 시 사이드바 열리도록 이벤트)
+const appBtn = document.querySelector('.header-appBar-wrap');
+const mobileMenuBar = document.querySelector('#header');
+const mobileMenu = document.querySelector('.mobile-menu');
+const closeBt = document.querySelector('.appbarCloseBt');
+
+
+//서브창 열기 아이콘을 눌렀을때
+appBtn.addEventListener('click', () => {
+  mobileMenu.style = 'display: block';
+})
+
+//닫기버튼 아이콘을 눌렀을때
+closeBt.addEventListener('click', () => {
+  mobileMenu.style = 'display: none';
+})
+
+
+//
 const submenuList = document.querySelectorAll(".navMenu > ul > li");
 
 submenuList.forEach(li => {
@@ -13,6 +32,9 @@ submenuList.forEach(li => {
         })
     });
 });
+
+
+
 
 /*------------------------------------------------------------------------*/
 //2. 슬라이드 배너 구현

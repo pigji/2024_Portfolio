@@ -225,7 +225,7 @@ section {
   z-index: 11;
   position: fixed;
   top: 0;
-  left: -100%;
+  left:0;
   padding: 20px;
   box-sizing: border-box;
   display: none;
@@ -238,15 +238,15 @@ section {
 }
 
 /*logo 이미지영역*/
-.mobile-menu .mobile-menu-bar .menu-logoBt-wrap{
-  width: 200px;
+/* .mobile-menu .mobile-menu-bar .menu-logoBt-wrap{
+  width: 100%;
   height: auto;
   margin-top: 15px;
-}
+} */
 /*logo 이미지*/
-.mobile-menu .mobile-menu-bar .menu-logoBt-wrap img{
+/* .mobile-menu .mobile-menu-bar .menu-logoBt-wrap img{
   width: 100%;
-}
+} */
 .menu-appBar-wrap{
   width: 22px;
   height: 16px;
@@ -263,7 +263,7 @@ section {
   top: 50%;
   width: 100%;
   height: 2px;
-  background-color: #fff;
+  background-color: #000;
   margin-top: -1px;
 }
 /* x표시로 만들기 위해 rotate로 45도 만큼 회전시킴 */
@@ -317,6 +317,7 @@ section {
   margin-right: 12px;
   border-radius: 5px;
   font-size: 15px;
+  transition: 0.3s;
 }
 .mobile-menu .mobile-menu-footer-button button:last-child{
   margin: 0;
@@ -341,6 +342,12 @@ section {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   font-size: 15px;
   cursor: pointer;
+}
+.mobile-menu-travel-list > ul > li:hover{
+  border-top: 1px solid #ae7ece;
+  border-bottom: 1px solid #ae7ece;
+  font-weight: 500;
+  padding-left: 10px;
 }
 
 /* .mobile-menu-travel-list > ul{
@@ -392,31 +399,69 @@ section {
 }
 
 
-
-/*상단메뉴 : 상단 메뉴를 슬라이드 메뉴창으료 표현*/
-@media screen and (max-width: 1500px) {
-  .topNav{
-    display: block;
-  }
-  .navMenu > ul{
-    display: none;
-  }
-  .mobile-menu{
-    display: none;
-    left: -100px;
-  }
+/*dfdffd*/
+#header{
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
 }
-@media screen and (max-width: 1100px) {
-  .topNav{
-    display: none;
-  }
-  .navMenu > ul{
-    display: none;
-  }
-  .mobile-menu{
-    display: block;
-    left: 0;
-  }
+.header-mobile-menu-wrap{
+  width: 100%;
+  max-width: 1090px;
+  margin: 0 auto;
+  position: relative;
+  left: 0;
+  display: none;
+}
+.header-mobile-menu-wrap .header-mobile-menu-bar{
+  width: 100%;
+  height: 80px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e1e9ff
+}
+.header-mobile-menu-wrap .header-mobile-menu-bar h3{
+  order: 2; /*가운데에서 왼쪽으로 위치 변경*/
+  font-size: 17px;
+  color: #444;
+}
+
+
+.header-appBar-wrap{
+  width: 22px;
+  height: 16px;
+  order: 1; /*위치 변경*/
+}
+.header-appBar-wrap > a{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+}
+/*i태그 공통속성*/
+.header-appBar-wrap > a > i{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  top: 0;
+  left: 0;
+}
+
+.header-appBar-wrap > a > i.appbar-line1{
+  top: 0%;
+}
+.header-appBar-wrap > a > i.appbar-line2{
+  top: 50%;
+}
+.header-appBar-wrap > a > i.appbar-line3{
+  top: 100%;
 }
 
 /*------------------main------------------------*/
@@ -942,7 +987,7 @@ main {
 
 /*------------------Footer---------------------*/
 /*-----------------미디어쿼리------------------*/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1090px) {
   /* pc */
 }
 @media screen and (min-width: 768px) {
@@ -950,4 +995,33 @@ main {
 }
 @media screen and (min-width: 480px) {
   /* 모바일 상단메뉴 왼쪽 슬라이드바로 변경 */
+}
+
+
+/*상단메뉴 : 상단 메뉴를 슬라이드 메뉴창으료 표현*/
+@media screen and (max-width: 1090px) {
+  .header-mobile-menu-wrap{
+    display: block;
+  }
+  .topNav{
+    display: block;
+  }
+  .navMenu > ul{
+    display: none;
+  }
+  .mobile-menu{
+    display: none;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .topNav{
+    display: none;
+  }
+  .navMenu > ul{
+    display: none;
+  }
+  /* .mobile-menu{
+    display: block;
+    left: 0;
+  } */
 }
