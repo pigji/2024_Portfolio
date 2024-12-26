@@ -43,7 +43,7 @@ section {
 }
 
 .topNav{
-  border: 1px solid red;
+
 }
 
 .join {
@@ -70,6 +70,8 @@ section {
 }
 
 .subJoin {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -83,6 +85,7 @@ section {
 
 /*검색창*/
 .searchBox {
+  width: 550px;
   display: flex;
   align-items: center;
   margin-left: 100px;
@@ -186,6 +189,7 @@ section {
 }
 
 .navMenu > ul {
+  width: 100%;
   display: flex;
   align-items: center;
 }
@@ -473,12 +477,15 @@ main {
   margin-bottom: 30px;
 }
 .bus-trip {
-  width: 1400px;
-  height: 650px;
+  width: 100%;
+  height: 730px;
   position: relative;
 }
 
 .busBox {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .busPick {
   width: 500px;
@@ -737,6 +744,8 @@ main {
 }
 
 .tab_menu {
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -746,7 +755,9 @@ main {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 10px 30px;
+  /* padding: 10px 30px; */
+  width: 160px;
+  height: 50px;
   transition: 0.3s;
   margin: 0 10px;
   border: 1px solid #555;
@@ -955,12 +966,13 @@ main {
 .icon{
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 .icon > .prev{
   position: absolute;
   z-index: 999;
-  left: 40px;
   top: 40%;
+  left: 20px;
   font-size: 40px;
   color: #2d64ff;
 }
@@ -968,7 +980,7 @@ main {
   position: absolute;
   z-index: 999;
   top: 40%;
-  right: 20px;
+  right: 40px;
   font-size: 40px;
   color: #2d64ff;
 }
@@ -987,15 +999,164 @@ main {
 
 /*------------------Footer---------------------*/
 /*-----------------미디어쿼리------------------*/
-@media screen and (min-width: 1090px) {
-  /* pc */
-}
 @media screen and (min-width: 768px) {
   /* 태블릿 */
 }
 @media screen and (min-width: 480px) {
   /* 모바일 상단메뉴 왼쪽 슬라이드바로 변경 */
 }
+
+@media screen and (max-width: 1200px) {
+  /* pc */
+  .subJoin {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  /*검색창*/
+  .searchBox {
+    width: 520px;
+    display: flex;
+    align-items: center;
+    margin: 0 30px 0 0;
+  }
+  .search {
+    width: 380px;
+    height: 45px;
+    border: 3px solid #2d64ff;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .subJoinMenu > ul > li {
+    width: 60px;
+    text-align: center;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  .subJoinMenu > ul > li > img{
+    width: 30px;
+    height: 30px;
+  }
+  .subJoinMenu > ul > li > p {
+    font-size: 12px;
+  }
+  .navMenu > ul{
+    width: 80%;
+  }
+  .navMenu > ul > li > a {
+    display: block;
+    width: 135px;
+    height: 50px;
+    line-height: 45px;
+    transition: all 0.2s;
+    font-size: 15px;
+  }
+
+  /*버스여행*/
+  .busPick {
+    width: 480px;
+    height: 650px;
+  }
+  .busSubPick {
+    width: 750px;
+    height: 400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 23%;
+    right: 260px;
+    z-index: 10;
+  }
+  
+  /*버스패키지 요소 1개 css*/
+  .busPackage:last-child{
+    display: none;
+  }
+  .busPackage {
+    width: 340px;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px #eee; /*색상변경 예정*/
+  }
+  .busPackage > .busPackageImg {
+    width: 100%;
+    height: 240px;
+    cursor: pointer;
+  }
+  .busPackage > .busPackageImg > img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  /*배너*/
+  .trImg {
+    height: 220px;
+  }
+  .trImgbanner1 {
+    width: 100%;
+    height: 100%;
+    background-color: #ffcd2e;
+    text-align: right;
+  }
+  .trImgbanner1 > img,
+  .trImgbanner2 > img {
+    width: 520px;
+    height: 100%;
+    cursor: pointer;
+  }
+}
+
+/*베스트시즌*/
+.tab_listBox > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 73px;
+}
+.tab_listBox > ul > li {
+  width: 350px;
+  height: 380px;
+  margin: 30px 20px;
+}
+.best-seasonImg {
+  width: 100%;
+  height: 230px;
+}
+.best-seasonData {
+  padding: 5 10px;
+  background-color: #fff;
+  height: 140px;
+  text-align: left;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.best-seasonTitle {
+  width: 100%;
+  height: 80px;
+  font-size: 18px;
+}
+
+/*상품번호 + 가격*/
+.best-seasonPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.best-seasonPrice > .price > strong {
+  font-size: 20px;
+  color: #333;
+}
+
+
 
 
 /*상단메뉴 : 상단 메뉴를 슬라이드 메뉴창으료 표현*/
@@ -1012,7 +1173,125 @@ main {
   .mobile-menu{
     display: none;
   }
+
+  /*버스여행 영역*/
+  .busBox{
+    width: 80%;
+    overflow: hidden;
+  }
+  .busPick{
+    width: 450px;
+    height: 600px;
+  }
+
+
+  .busPackage{
+    width: 300px;
+    height: 90%;
+  }
+  .busPackage:last-child{
+    display: none;
+  }
+  .busPackage > .busPackageImg{
+    width: 100%;
+    height: 200px;
+  }
+  .busPackage > .busPackageImg > img{
+    width: 100%;
+    height: 100%;
+  }
+  .busPackageData{
+    width: 100%;
+    height: 180px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 5px 5px 3px #888; /*색상변경 예정*/
+  }
+  .busPackageTitle > p{
+    font-size: 14px;
+  }
+  .busPackageTitle > strong{
+    font-size: 15px;
+  }
+  .busPackageprice > .price > strong{
+    font-size: 20px;
+  }
+
+  
+  /*배너*/
+  .trImg {
+    height: 200px;
+  }
+  .trImgbanner1 {
+    width: 100%;
+    height: 100%;
+    background-color: #ffcd2e;
+    text-align: right;
+  }
+  .trImgbanner1 > img,
+  .trImgbanner2 > img {
+    width: 480px;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  /*베스트시즌여행*/
+  .tab_menu button {  /*Tab메뉴 버튼*/
+    width: 250px;
+    height: 45px;
+    font-size: 15px;
+  }
+  .tab_listBox > ul {
+    justify-content: center;
+    margin: 0 15px;
+  }
+  .tab_listBox > ul > li {
+    width: 310px;
+    height: 300px;
+    margin: 40px 20px;
+  }
+  .best-seasonImg {
+    width: 100%;
+    height: 200px;
+  }
+  .best-seasonData {
+    padding: 5 10px;
+    background-color: #fff;
+    height: 120px;
+    text-align: left;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .best-seasonTitle {
+    width: 100%;
+    height: 68px;
+    font-size: 15px;
+  }
+  
+  /*상품번호 + 가격*/
+  .best-seasonPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .best-seasonPrice > .price {
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .best-seasonPrice > .price > strong {
+    font-size: 20px;
+    color: #333;
+  }
 }
+
+
+
+
+
+
 @media screen and (max-width: 1090px) {
   .topNav{
     display: none;
