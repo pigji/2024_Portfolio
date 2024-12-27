@@ -117,12 +117,12 @@ function autoplay(){
         num++;	//num값을 1증가 시킴
         list.style.transition = 'margin-left .5s';
         //li의 넓이값 * num만큼 마이너스 값을 적용하여 왼쪽으로 이동
-        list.style.marginLeft = `${-li_widht * num}px`
+        list.style.marginLeft = `${-li_width * num}px`
     }, 50);
 }
 
 //슬라이드 자동실행
-let timer = setInterval(autoplay, 3000);
+let timer = setInterval(autoplay, 2000);
 
 //마우스 hover시 슬라이드 정지/ 마우스 아웃시 재개
 const listWrap = document.querySelector('.slide_wrap');
@@ -130,52 +130,52 @@ listWrap.addEventListener('mouseover', () => clearInterval(timer));
 listWrap.addEventListener('mouseout', () => timer = setInterval(autoplay, 3000));
 
 //next버튼에 클릭이벤트 리스너 추가
-document.querySelector('.next').addEventListener('click', function (e) {
-    if (eventhandler) {//eventhandler가 true일때만 실행
-      eventhandler = false;//슬라이드 중에 이벤트가 중첩으로 실행되는 것을 막아줌
-      if (num === total) {
-        num = 0;
-        list.style.transition = 'none';//transition을 제거
-        list.style.marginLeft = '0px';//#banner의 marginLeft값을 0으로 초기화
-      }
-      //0.05초 후에 함수를 실행
-      setTimeout(function () {
-        num++;//num값을 1 증가시킴
-        list.style.transition = 'margin-left .5s';
-        //li의 넓이값 * num만큼 마이너스값을 적용하여 왼쪽으로 이동
-        list.style.marginLeft = `${-li_width * num}px`;
+// document.querySelector('.next').addEventListener('click', function (e) {
+//     if (eventhandler) {//eventhandler가 true일때만 실행
+//       eventhandler = false;//슬라이드 중에 이벤트가 중첩으로 실행되는 것을 막아줌
+//       if (num === total) {
+//         num = 0;
+//         list.style.transition = 'none';//transition을 제거
+//         list.style.marginLeft = '0px';//#banner의 marginLeft값을 0으로 초기화
+//       }
+//       //0.05초 후에 함수를 실행
+//       setTimeout(function () {
+//         num++;//num값을 1 증가시킴
+//         list.style.transition = 'margin-left .5s';
+//         //li의 넓이값 * num만큼 마이너스값을 적용하여 왼쪽으로 이동
+//         list.style.marginLeft = `${-li_width * num}px`;
 
-        //0.5초 후에 evnethandler를 true로 변경하여 다시 이벤트가 발생하도록 만들어 줍니다.
-        setTimeout(function(){
-          eventhandler = true;
-        }, 500);
-      }, 50);
-    }
-  });
+//         //0.5초 후에 evnethandler를 true로 변경하여 다시 이벤트가 발생하도록 만들어 줍니다.
+//         setTimeout(function(){
+//           eventhandler = true;
+//         }, 500);
+//       }, 50);
+//     }
+//   });
 
-  //prev버튼에 클릭이벤트 리스너 추가
-  document.querySelector('.prev').addEventListener('click', function (e) {
-    if (eventhandler) {//eventhandler가 true일때만 실행
-      eventhandler = false;//슬라이드 중에 이벤트가 중첩으로 실행되는 것을 막아줌
-      if (num === 0) {//num이 0이 되면
-        num = total;//num값을 list의 마지막 순번으로 적용
-        list.style.transition = 'none';//transition을 제거
-        list.style.marginLeft = `${-li_width*num}px`;//#banner의 marginLeft값을 li요소의 마지막 위치로 이동
-      }
-      //0.05초 후에 함수를 실행
-      setTimeout(function () {
-        num--;//num값을 1 감소시킴
-        list.style.transition = 'margin-left .5s';
-        //li의 넓이값 * num만큼 마이너스값을 적용하여 왼쪽으로 이동
-        list.style.marginLeft = `${-li_width * num}px`;
+//   //prev버튼에 클릭이벤트 리스너 추가
+//   document.querySelector('.prev').addEventListener('click', function (e) {
+//     if (eventhandler) {//eventhandler가 true일때만 실행
+//       eventhandler = false;//슬라이드 중에 이벤트가 중첩으로 실행되는 것을 막아줌
+//       if (num === 0) {//num이 0이 되면
+//         num = total;//num값을 list의 마지막 순번으로 적용
+//         list.style.transition = 'none';//transition을 제거
+//         list.style.marginLeft = `${-li_width*num}px`;//#banner의 marginLeft값을 li요소의 마지막 위치로 이동
+//       }
+//       //0.05초 후에 함수를 실행
+//       setTimeout(function () {
+//         num--;//num값을 1 감소시킴
+//         list.style.transition = 'margin-left .5s';
+//         //li의 넓이값 * num만큼 마이너스값을 적용하여 왼쪽으로 이동
+//         list.style.marginLeft = `${-li_width * num}px`;
 
-        //0.5초 후에 evnethandler를 true로 변경하여 다시 이벤트가 발생하도록 만들어 줍니다.
-        setTimeout(function(){
-          eventhandler = true;
-        }, 500);
-      }, 50);
-    }
-  })
+//         //0.5초 후에 evnethandler를 true로 변경하여 다시 이벤트가 발생하도록 만들어 줍니다.
+//         setTimeout(function(){
+//           eventhandler = true;
+//         }, 500);
+//       }, 50);
+//     }
+//   })
 
 /*------------------------------------------------------------------------*/
 //5. 오늘 본 상품 팝업창 구현
