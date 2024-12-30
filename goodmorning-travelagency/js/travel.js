@@ -10,14 +10,12 @@ const closeBt = document.querySelector('.appbarCloseBt');
 appBtn.addEventListener('click', () => {
   mobileMenu.style = 'display: block';
 })
-
 //닫기버튼 아이콘을 눌렀을때
 closeBt.addEventListener('click', () => {
   mobileMenu.style = 'display: none';
 })
 
 
-//
 const submenuList = document.querySelectorAll(".navMenu > ul > li");
 
 submenuList.forEach(li => {
