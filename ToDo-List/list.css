@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+body{font-family: 'GmarketSansMedium';}
+
+* {box-sizing: border-box;}
+ul {  margin: 0;  padding: 0; list-style: none;}
+li:last-child{border-radius: 0 0 5px 5px;}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 17px 8px 17px 40px;
+  background: #fff0f5;
+  font-size: 18px;
+  transition: 0.2s;
+  user-select: none;
+  
+}
+/* 모든 홀수 목록 항목을 다른 색상으로 설정합니다 */
+ul li:nth-child(odd) {
+  background: #f8dbe5;
+}
+/* 마우스 오버 시 더 어두운 배경색 */
+ul li:hover {
+  background: #d88995;
+  color: #fff;
+}
+/*클릭하면 배경색을 추가하고 텍스트에 취소선을 긋습니다.*/
+ul li.checked {
+  background: #c77a85;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* 가상요소 : 클릭 시 "checked" 표시 추가 */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px 15px;
+  margin: 7px 7px 0 0;
+}
+.close:hover {
+  background-color: #666;
+  color: white;
+  border-radius: 5px;
+}
+
+.listBox{
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+
+.header {
+  background-color: #f19ba8;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+  border-radius: 5px 5px 0 0 ;
+}
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header > h2{
+  font-size: 28px;
+  letter-spacing: 12px;
+}
+
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 13px;
+  float: left;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-left: 50px;
+}
+
+/*추가 버튼*/
+.addBtn {
+  border:0;
+  padding: 10px;
+  width: 100px;
+  background: #db7093;
+  color: #333;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.addBtn:hover {
+  background-color: #c45d7f;
+  color: #fff;
+}
