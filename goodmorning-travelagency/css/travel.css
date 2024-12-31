@@ -1486,7 +1486,7 @@ footer{
   
   /*이미지요소*/
   .foodImg {
-    width: 290px;
+    width: 300px;
     height: 220px;
   }
   .foodImg > img {
