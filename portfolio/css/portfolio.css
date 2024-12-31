@@ -258,8 +258,11 @@ section{
 .Img16{background: url(../images/project-img/계산기.png) center/cover;}
 .Img17{background: url(../images/project-img/서울대학교병원.png) center/cover;}
 .Img18{background: url(../images/project-img/포트폴리오.png) center/cover;}
-.Img19{background: url(../images/) center/cover;}
-.Img20{background: url(../images/) center/cover;}
+.Img19{background: url(../images/project-img/디자인호텔\ \(1\).png) center/cover;}
+.Img20{background: url(../images/project-img/tmdb.png) center/cover;}
+.Img21{background: url(../images/project-img/굿모닝여행사\ \(1\).png) center/cover;}
+.Img22{background: url(../images/project-img/todolist.png) center/cover;}
+.Img23{background: url(../images/) center/cover;}
 
 
 /*텍스트 요소*/
@@ -395,7 +398,7 @@ section{
   border-bottom: 1px solid #000; 
   transform: rotate(-45deg); 
   animation: btn-motion6 2s infinite;
-  opacity: 0;
+  opacity: 0.5;
   box-sizing: border-box;
 }
 .btn-motion6 span:nth-of-type(1) {animation-delay: 0s;}
@@ -404,12 +407,12 @@ section{
 
 @keyframes btn-motion6 {
   0% {
-    opacity: 0;
+    opacity: 0.5;
   }
   50% {
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 0.5;
   }
 }
