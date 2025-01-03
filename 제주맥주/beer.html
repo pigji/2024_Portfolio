@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제주맥주</title>
+
+  
+   
+    <!--tailwindcss-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--폰트어썸 내 script 코드-->
+    <script src="https://kit.fontawesome.com/3223480a48.js" crossorigin="anonymous"></script>
+
+    <!--Swiper API-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/beer.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/beer.js" defer></script>
+  </head>
+  <body>
+    <!--Topbar 구현-->
+    <div class="site-wrap">
+      <div class="header-wrap">
+        <header class="pc-top-bar">
+          <div class="pc-top-bar__first-section">
+            <div class="con">
+              <p>
+                <a href="#" class="text-white font-bold">
+                  [3,000원 쿠폰] 카카오 채널 친구 추가 즉시 지급
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="pc-top-bar__second-section">
+            <div class="con flex h-full">
+              <div class="flex-1"></div>
+              <div class="flex-1 flex items-center justify-center">
+                <a href="#" class="pc-top-bar__logo">
+                  <img src="image/logo.png" alt="logo" />
+                </a>
+              </div>
+              <div class="flex-1 flex items-center">
+                <div class="widget-box w-full flex flex-col items-end">
+                  <nav class="widget-menu">
+                    <ul class="flex">
+                      <li><a href="#">LOGIN</a></li>
+                      <li><a href="#">JOIN</a></li>
+                      <li><a href="#">CART</a></li>
+                    </ul>
+                  </nav>
+                  <div class="btn-group">
+                    <a href="#"> 논알콜 제주누보 구매 </a>
+                    <a href="#"> 암조장 예약 </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pc-top-bar__third-section h-[63px]">
+            <div class="con h-full">
+              <nav class="menu-1">
+                <ul class="flex">
+                  <li><a href="#">OUR BEERS</a></li>
+                  <li>
+                    <a href="#">ONLINE-SHOP</a>
+                    <ul class="hidden">
+                      <li><a href="#">2차메뉴아이템</a></li>
+                      <li><a href="#">2차메뉴아이템</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">BREWERY</a></li>
+                  <li class="txt">
+                    <a href="#">CLUB NOUVEAU</a>
+                    <a href="#">NOTICE</a>
+                  </li>
+                  <li>
+                    <a href="#">OEM/ODM</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+        <header class="mobile-top-bar">
+          <div class="mobile-top-bar__first-section">
+            <p>
+              <a href="#" class="text-white font-bold">
+                [3,000원 쿠폰] 카카오 채널 친구 추가 즉시 지급
+              </a>
+            </p>
+          </div>
+          <div class="mobile-top-bar__second-section">
+            <div class="flex-1 flex items-center">
+              <a href="#" class="mobile-top-bar__logo">
+                <img src="image/logo.png" alt="모바일 로고" />
+              </a>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-end h-full gap-x-3 mr-[3px]">
+                <a href="#" class="text-[13px]">LOGIN</a>
+                <span class="cursor-pointer">
+                  <i class="fa-solid fa-bars"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section>
+          <div class="video">
+            <video src="image/제주맥주.mp4" muted autoplay playsinline></video>
+          </div>  
+        </section>
+
+        <main>
+          <h2>맥주보다 맛있는 제주맥주 논알콘 누보시리즈</h2>
+          <div class="nouveau-series">
+            <div class="nouveauBox">
+              <div class="nouveauImg">
+                <img src="image/망고누보(x24)_1.webp" alt="망고누보" class="blockImg">
+                <img src="image/망고누보.jpg" alt="망고누보" class="hoverImg">
+              </div>
+              <div class="nouveauText">
+                <p>제목</p>
+                <div class="price">
+                  <strong>할인 가격표시</strong>
+                  <p>가격표시</p>
+                </div>
+              </div>
+            </div> <!--nouveauBox-->
+            <div class="nouveauBox">
+              <div class="nouveauImg">
+                <img src="image/망고누보(x12)_1.webp" alt="망고누보" class="blockImg">
+                <img src="image/망고누보.jpg" alt="망고누보" class="hoverImg">
+              </div>
+              <div class="nouveauText">
+                <p>제목</p>
+                <div class="price">
+                  <strong>할인 가격표시</strong>
+                  <p>가격표시</p>
+                </div>
+              </div>
+            </div> <!--nouveauBox-->
+            <div class="nouveauBox">
+              <div class="nouveauImg">
+                <img src="image/망고누보(x6)_1.webp" alt="망고누보" class="blockImg">
+                <img src="image/망고누보.jpg" alt="망고누보" class="hoverImg">
+              </div>
+              <div class="nouveauText">
+                <p>제목</p>
+                <div class="price">
+                  <strong>할인 가격표시</strong>
+                  <p>가격표시</p>
+                </div>
+              </div>
+            </div> <!--nouveauBox-->
+            <div class="nouveauBox">
+              <div class="nouveauImg">
+                <img src="image/제주누보(x6).webp" alt="망고누보">
+              </div>
+              <div class="nouveauText">
+                <p>제목</p>
+                <div class="price">
+                  <strong>할인 가격표시</strong>
+                  <p>가격표시</p>
+                </div>
+              </div>
+            </div> <!--nouveauBox-->
+            <div class="nouveauBox">
+              <div class="nouveauImg">
+                <img src="image/제주누보(x12).webp" alt="망고누보">
+              </div>
+              <div class="nouveauText">
+                <p>제목</p>
+                <div class="price">
+                  <strong>할인 가격표시</strong>
+                  <p>가격표시</p>
+                </div>
+              </div>
+            </div> <!--nouveauBox-->
+          </div> <!--nouveau-series-->
+        </main>
+        
+        <section class="swiper-banner-box" id="mdProduct">
+          <h2>MD</h2>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide-wrap">
+                <div class="mdImg">
+                  <img src="image/MD담요_1.webp" alt="MD상품 김부각" class="blockImg">
+                  <img src="image/MD담요_2.jpg" alt="MD상품 김부각" class="hoverImg">
+                </div>
+                <div class="mdText">
+                  <p>제목</p>
+                  <div class="price">
+                    <strong>할인 가격표시</strong>
+                    <p>가격표시</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-wrap">
+                <div class="mdImg">
+                  <img src="image/MD전용잔.webp" alt="망고누보" class="MD상품 맥주전용잔">
+                </div>
+                <div class="mdText">
+                  <p>제목</p>
+                  <div class="price">
+                    <strong>할인 가격표시</strong>
+                    <p>가격표시</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-wrap">
+                <div class="mdImg">
+                  <img src="image/MD코스터.webp" alt="망고누보" class="MD상품 코스터">
+                </div>
+                <div class="mdText">
+                  <p>제목</p>
+                  <div class="price">
+                    <strong>할인 가격표시</strong>
+                    <p>가격표시</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-wrap">
+                <div class="mdImg">
+                  <img src="image/MD김부각_1.webp" alt="MD상품 김부각" class="blockImg">
+                  <img src="image/MD김부각_2.jpg" alt="MD상품 김부각" class="hoverImg">
+                </div>
+                <div class="mdText">
+                  <p>제목</p>
+                  <div class="price">
+                    <strong>할인 가격표시</strong>
+                    <p>가격표시</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-wrap">
+                <div class="mdImg">
+                  <img src="image/MD화투.webp" alt="MD상품 화투">
+                </div>
+                <div class="mdText">
+                  <p>제목</p>
+                  <div class="price">
+                    <strong>할인 가격표시</strong>
+                    <p>가격표시</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section id="sns">
+          <div class="snsBox">
+            <div class="snsText">
+              <h3>@jejubeerofficial</h3>
+              <p>제주맥주 공식 인스타그램 계정에서<br>제주맥주의 신제품, 이벤트 소식을 받아보실 수 있습니다.</p>
+              <button>바로가기</button>
+            </div>
+            <div class="snsImgBox">
+              <img src="image/sns1.PNG" alt="sns이미지">
+              <img src="image/sns2.PNG" alt="sns이미지">
+              <img src="image/sns3.PNG" alt="sns이미지">
+            </div>
+          </div>
+        </section>
+
+        <section id="brewery">
+          <div class="bgImg">
+            <div class="bgColor">
+              <p>새로운 양조문화를 빚는 곳,<br>제주맥주 양조장 입니다.</p>
+              <button>JEJU BEER BREWERY</button>
+            </div>
+          </div>
+        </section>
+
+        <footer>
+          <div class="footerTop">
+            <ul>
+              <li><a href="#">ABOUT US</a></li>
+              <li><a href="#">OUR BEERS</a></li>
+              <li><a href="#">RECRUIT</a></li>
+              <li><a href="#">NEWS</a></li>
+              <li><a href="#">CONTACT</a></li>
+              <li><a href="#">IR</a></li>
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">개인정보 처리방침</a></li>
+              <li><a href="#">영상정보 처리방침</a></li>
+            </ul>
+            <div class="footerTopIcon">
+              <img src="image/footerIcon.png" alt="footer아이콘" class="fIcon1">
+              <img src="image/footerIcon2.png" alt="footer아이콘" class="fIcon2">
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
