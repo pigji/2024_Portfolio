@@ -133,14 +133,15 @@ section{
 }
 /*비디오*/
 .video{
-  width: 100%;
-  height: 650px;
-  margin-top: 20px;
+  width: 100vw;
+  height: 100%;
+  margin: 20px auto 0;
 }
 .video > video{
   width: 100%;
   height: 100%;
-  border: 1px solid red;
+  text-align: center;
+  margin: 0 auto;
 }
 
 /*---------- main :누보시리즈 -----------*/
@@ -159,11 +160,14 @@ main > h2{
 
 
 .nouveau-series{
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .nouveauBox{
+  width: 100%;
+  height: 100%;
   margin: 0 10px;
   cursor: pointer;
 }
@@ -220,7 +224,6 @@ main > h2{
 #mdProduct{
   background-color: #f4f8f8;
   padding-top: 100px;
-  padding-bottom: 120px;
 }
 #mdProduct > h2{
   text-align: center;
@@ -230,19 +233,28 @@ main > h2{
   font-weight: bold ;
 }
 
-.swiper-slide {
+/* .swiper-slide {
   flex-shrink: 1;
+} */
+ #mdProduct .swiper {padding: 0 10px; box-sizing: border-box; overflow: hidden; border: 1px solid red;}
+/*#mdProduct .swiper .swiper-wrapper{
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.swiper-slide{
+#mdProduct .swiper .swiper-wrapper .swiper-slide{
   margin: 0 10px;
   cursor: pointer;
-}
+  width:390px;
+  overflow: hidden;
+  border: 1px solid #f00;
+} */
 
 /*이미지요소*/
 .mdImg{
-  width: 390px;
-  height: 400px;
+ /*  width: 350px;
+  height: 350px; */
+ 
 }
 .mdImg > img{
   width: 100%;
@@ -264,7 +276,7 @@ main > h2{
 
 /*텍스트요소*/
 .mdText{
-  width: 390px;
+  width: 100%;
   height: 80px;
   background-color: #fff;
   border-radius: 0 0 10px 10px;
@@ -386,8 +398,8 @@ main > h2{
 footer{
   width: 100%;
   height: 100%;
-  padding: 100px 0;
-  background-color: #e5e7eb;
+  padding: 80px 0;
+  background-color: #fcfdff;
   color: #777;
 }
 
@@ -408,6 +420,10 @@ footer{
   margin-right: 20px;
   font-size: 14px;
 }
+.footerTop > ul .on{
+  color: #333;
+  font-weight: bold;
+}
 
 .footerTopIcon{
   display: flex;
@@ -425,6 +441,29 @@ footer{
 .footerTopIcon > .fIcon2{
   width: 40px;
   height: 40px;
+}
+
+.footerSub{
+  width: 100%;
+  height: 100%;
+  margin: 25px auto;
+  padding: 0 30px;
+}
+.txt1 > p{
+  font-size: 14px;
+}
+.txt1_sub{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.txt2 > p{
+  font-size: 12px;
+  color: rgb(247, 83, 83);
+  margin: 25px 0;
+}
+.txt3 > p{
+  font-size: 12px;
 }
 
 
@@ -465,16 +504,61 @@ footer{
 
 
 /*미디어쿼리*/
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px){   /*pc*/
   .mobile-top-bar{
     display: none;
   }
 }
-@media screen and (max-width: 991px){
+@media screen and (max-width: 991px){   /*mobile*/
   .pc-top-bar{
     display: none;
   }
   .mobile-top-bar{
     display: block;
   }
+
+  /*MD*/
+  #mdProduct .swiper {padding: 0 10px; box-sizing: border-box; overflow: hidden;}
+
+  .swiper-slide{
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  /* .mdImg{
+    width: 500px;
+    height: 500px;
+  } */
+  .mdImg > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  .mdText{
+    width: 500px;
+  }
+
+  .footerTop > ul > li{
+    font-size: 12px;
+  }
+
+  .footerTopIcon > img{
+    display: none;
+  }
+  .txt1 > p{
+    font-size: 12px;
+  }
+  .txt1_sub{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  .txt2 > p{
+    font-size: 10px;
+    color: rgb(247, 83, 83);
+    margin: 25px 0;
+  }
+  .txt3 > p{
+    font-size: 10px;
+  }
+
 }

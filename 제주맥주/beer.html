@@ -84,7 +84,7 @@
         </header>
         <header class="mobile-top-bar">
           <div class="mobile-top-bar__first-section">
-            <p>
+            <p class="con">
               <a href="#" class="text-white font-bold">
                 [3,000원 쿠폰] 카카오 채널 친구 추가 즉시 지급
               </a>
@@ -109,7 +109,9 @@
 
         <section>
           <div class="video">
-            <video src="image/제주맥주.mp4" muted autoplay playsinline></video>
+            <video class="bg-video" muted autoplay playsinline>
+              <source src="image/제주맥주_main.mp4" type="video/mp4">
+            </video>
           </div>  
         </section>
 
@@ -188,14 +190,81 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide swiper-slide-wrap">
                 <div class="mdImg">
+                  <img src="image/MD제주맥주올레잔.webp" alt="제주맥주올레잔" class="MD상품 전용잔">
+                </div>
+                <div class="mdText">
+                  <p>제주맥주 올레길 전용잔 330mL</p>
+                  <div class="price">
+                    <p>10,500원</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-wrap">
+                <div class="mdImg">
+                  <img src="image/MD담요_1.webp" alt="MD상품 김부각" class="blockImg">
+                  <img src="image/MD담요_2.jpg" alt="MD상품 김부각" class="hoverImg">
+                </div>
+                <div class="mdText">
+                  <p>제주누보 올레길 담요</p>
+                  <div class="price">
+                    <p>14,000원</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-wrap">
+                <div class="mdImg">
+                  <img src="image/MD전용잔.webp" alt="전용잔" class="MD상품 맥주전용잔">
+                </div>
+                <div class="mdText">
+                  <p>제주맥주 전용잔 370mL</p>
+                  <div class="price">
+                    <p>5,500원</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-wrap">
+                <div class="mdImg">
+                  <img src="image/MD코스터.webp" alt="코스터" class="MD상품 코스터">
+                </div>
+                <div class="mdText">
+                  <p>제주맥주 앰블러 리버 코스터</p>
+                  <div class="price">
+                    <p>5,900원</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-wrap">
+                <div class="mdImg">
+                  <img src="image/MD김부각_1.webp" alt="MD상품 김부각" class="blockImg">
+                  <img src="image/MD김부각_2.jpg" alt="MD상품 김부각" class="hoverImg">
+                </div>
+                <div class="mdText">
+                  <p>제주에서 만난 찹쌀 김부각</p>
+                  <div class="price">
+                    <p>14,000원</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-wrap">
+                <div class="mdImg">
+                  <img src="image/MD화투.webp" alt="MD상품 화투">
+                </div>
+                <div class="mdText">
+                  <p>제주맥주 조약돌 화투</p>
+                  <div class="price">
+                    <p>10,900원</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-wrap">
+                <div class="mdImg">
                   <img src="image/MD담요_1.webp" alt="MD상품 김부각" class="blockImg">
                   <img src="image/MD담요_2.jpg" alt="MD상품 김부각" class="hoverImg">
                 </div>
                 <div class="mdText">
                   <p>제목</p>
                   <div class="price">
-                    <strong>할인 가격표시</strong>
-                    <p>가격표시</p>
+                    <p>10,500원</p>
                   </div>
                 </div>
               </div>
@@ -206,8 +275,7 @@
                 <div class="mdText">
                   <p>제목</p>
                   <div class="price">
-                    <strong>할인 가격표시</strong>
-                    <p>가격표시</p>
+                    <p>10,500원</p>
                   </div>
                 </div>
               </div>
@@ -218,8 +286,7 @@
                 <div class="mdText">
                   <p>제목</p>
                   <div class="price">
-                    <strong>할인 가격표시</strong>
-                    <p>가격표시</p>
+                    <p>10,500원</p>
                   </div>
                 </div>
               </div>
@@ -231,8 +298,7 @@
                 <div class="mdText">
                   <p>제목</p>
                   <div class="price">
-                    <strong>할인 가격표시</strong>
-                    <p>가격표시</p>
+                    <p>10,500원</p>
                   </div>
                 </div>
               </div>
@@ -243,12 +309,10 @@
                 <div class="mdText">
                   <p>제목</p>
                   <div class="price">
-                    <strong>할인 가격표시</strong>
-                    <p>가격표시</p>
+                    <p>10,500원</p>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </section>
@@ -287,12 +351,30 @@
               <li><a href="#">CONTACT</a></li>
               <li><a href="#">IR</a></li>
               <li><a href="#">이용약관</a></li>
-              <li><a href="#">개인정보 처리방침</a></li>
+              <li class="on"><a href="#">개인정보 처리방침</a></li>
               <li><a href="#">영상정보 처리방침</a></li>
             </ul>
             <div class="footerTopIcon">
               <img src="image/footerIcon.png" alt="footer아이콘" class="fIcon1">
               <img src="image/footerIcon2.png" alt="footer아이콘" class="fIcon2">
+            </div>
+          </div>
+          <div class="footerSub">
+            <div class="txt1">
+              <div class="txt1_sub">
+                <p>제주맥주 주식회사</p>
+                <p>대표이사 신성현</p>
+              </div>
+              <p>본사)제주특별자치도 제주시 한림읍 금능농공길 62-11 &nbsp;&nbsp; 서울사무실)서울특별시 중구 동호로 228 동호 38빌딩 6층</p>
+              <p>호스팅 제공주 (주)아임웹 사업자등록번호 <b>616-86-27415</b> 통신판매업신고번호 제 2020-제주한림0101호</p>
+              <p>고객센터 <b>02-2235-5559&nbsp; |&nbsp;&nbsp;jejubeer@jejubeer.co.kr</b></p>
+              <p></p>
+            </div>
+            <div class="txt2">
+              <p>경고 : 지나친 음주는 뇌졸증, 기억력 손상이나 치매를 유발합니다. 임신중 음주는 기형아 출생 위험을 높입니다.</p>
+            </div>
+            <div class="txt3">
+              <p>COPYRIGHT 2024 &copy; JEJU BEER COMPANY</p>
             </div>
           </div>
         </footer>
