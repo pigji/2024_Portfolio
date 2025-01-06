@@ -9,10 +9,329 @@ body{
   font-family: 'GmarketSansMedium';
 }
 
+
 /*초기화*/
 *{margin: 0; padding: 0; box-sizing: border-box;}
 ul, li{list-style: none;}
 a{text-decoration: none; color: inherit;}
+
+/*스크롤 Top 버튼*/
+.topBtn1{
+  position: fixed;
+  bottom: 180px;
+  right: 30px;
+  z-index: 997;
+}
+.topBtn1 img{
+  width: 60px;
+  height: 60px;
+}
+.topBtn2{
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  z-index: 998;
+}
+.topBtn2 img{
+  width: 60px;
+  height: 60px;
+}
+.topBtn3{
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  position: fixed;  /*고정*/
+  bottom: 20px;
+  right: 30px;
+  z-index: 999;
+  display: none;  /*스크롤로 밑으로 이동했을때만 나타나게 하기 위해 none설정*/
+}
+.topBtn3 img{
+  width: 60px;
+  height: 60px;
+}
+
+/*======================================*/
+/*공통속성*/
+.container{
+  width:1000px;
+  margin:0 auto;
+  box-sizing:border-box;
+  padding:100px 20px;
+}
+/*=======================================*/
+/*header*/
+header{
+  width:100%;
+  background-color:#fff;
+  box-shadow:0 1px 2px rgba(0,0,0,0.2);
+}
+header > .container{
+  padding:24px 10px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  font-family: "Katibeh";
+  font-size:42px;
+  height:20px;
+  transform:translateY(-24px);
+  letter-spacing: 2px;
+}
+
+nav{
+  display:flex;
+}
+.gnb, .icon{
+  display:flex;
+}
+.gnb > li{
+  margin:0 20px;
+  transform:translateY(2px);
+}
+.icon > li{
+  margin:0 5px;
+  font-size:20px;
+}
+/*메뉴에 hover효과*/
+nav li:hover,
+nav li.active{
+  color:orange;
+}
+/*------------------------------------*/
+/*배너*/
+#banner{
+  min-width:1000px;
+  height:600px;
+  background:url(../img/main.jpg) center/cover;
+  color:#fff;
+}
+#banner h1{
+  font-family: Georgia,"Nanum Gothic";
+  font-size:60px;
+  font-weight: normal;
+}
+#banner h1 i{
+  color:orange; 
+  padding-left:20px;
+}
+#banner h2{
+  font-size:30px;
+  margin:10px 0 40px;
+}
+#banner .btn button{
+  padding:8px 34px;
+  margin-right:10px;
+  font-size:14px;
+  border:2px solid #fff;
+  background-color:transparent;
+  color:#fff;
+  cursor:pointer;
+  transition:all .3s;
+}
+/*버튼에 hover효과*/
+#banner .btn button:hover{
+  border-color:#fc0;
+  color:#fc0;
+}
+/*------------------------------------*/
+/*works*/
+#works{
+  background-color:#fcd307;
+  min-width:1000px;
+}
+#works > .container{
+  width:800px;
+  padding:100px 0;/*좌우 여백을 제거*/
+  display:flex;
+}
+#works .box{
+  width:200px;
+  text-align: center;
+}
+#works .box img{
+  border-radius: 50%;
+}
+#works .box h3{
+  margin:20px 0 5px;
+}
+/*------------------------------------*/
+/*about*/
+#about h1{
+  font-family: Georgia,"Nanum Gothic";
+  font-size:60px;
+  font-weight: normal;
+}
+#about h1 i{
+  margin-right:20px;
+}
+#about > .container > p{
+  font-size:18px;
+  text-indent: 70px;
+}
+
+#about .member{
+  margin:60px 0;
+  display:flex;
+  justify-content: space-around;
+}
+#about .member > li{
+  text-align: center;
+  transition: all 0.3s; /*속성이 변경되면 0.3초동안 변경*/
+  opacity: 0; /*0값을 줘서 눈에 안보이게 함*/
+}
+
+/*해당 요소 속성적용*/
+#about .member > li:nth-child(1){
+  transform: translateX(-100%);
+}
+#about .member > li:nth-child(2){
+  transform: translateY(-100%);
+}
+#about .member > li:nth-child(3){
+  transform: translateY(100%);
+}
+#about .member > li:nth-child(4){
+  transform: translateX(100%);
+}
+
+/*멤버의 on클래스가 추가되면 li요소가 화면에 나타남*/
+#about .member.on > li{
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+#about .member h3{
+  font-size:14px;
+  margin:20px 0 5px;
+  letter-spacing: 6px;
+}
+#about .member p{
+  color:#666;
+  letter-spacing: 2px;
+}
+
+#about .txt{
+  display:flex;
+}
+#about .txt > li{
+  padding:0 20px;
+  text-align: justify;
+  line-height:1.6;
+}
+/*------------------------------------*/
+/*contact*/
+#contact{
+  min-width:1000px;
+  background-color:#333;
+  color:#fff;
+}
+#contact h1{
+  font-family: Georgia,"Nanum Gothic";
+  font-size:60px;
+  font-weight: normal;
+}
+#contact h1 i{
+  margin-right:20px;
+}
+#contact > .container > p{
+  font-size:18px;
+  text-indent: 70px;
+}
+
+#contact .contact-wrap{
+  display:flex;
+  margin-top:80px;
+}
+#contact .contact-wrap .map > p{
+  margin: 5px 0;
+}
+#contact .contact-wrap .map > p > i{
+  margin: 5px 0;
+}
+
+.contact-wrap > div{
+  width:50%;
+}
+
+.contact-wrap > .address{
+  box-sizing:border-box;
+  padding:0 70px;
+}
+
+.contact-wrap > .address > p{
+  margin-bottom:40px;
+  line-height:40px;
+}
+.contact-wrap > .address > p > i{
+  font-size:35px;
+  vertical-align: middle;
+  margin-right:10px;
+}
+
+.contact-input label{
+  display:block;
+  line-height:1.5;
+  margin-bottom:10px;
+}
+.contact-input .wrap{
+  display:flex;
+  justify-content: space-between;
+}
+.contact-input .wrap > p{
+  width:235px;
+}
+.contact-input .wrap > textarea{
+  width:240px;
+  height:130px;
+  border:0; 
+  outline: 0;
+  padding:10px;
+  box-sizing: border-box;
+}
+input[type=text]{
+  width:100%;
+  height:40px;
+  border:0;
+  margin-bottom:5px;
+  padding:10px;
+  box-sizing: border-box;
+  outline:0;
+}
+input[type=submit]{
+  padding:6px 24px;
+  background-color:#f9be20;
+  border:0;
+  color:#fff;
+  font-weight: bold;
+  cursor:pointer;
+}
+/*버튼에 hover효과*/
+input[type=submit]:hover{
+  background-color:#f5ae16;
+}
+
+#contact hr{
+  border:1px solid #fff;
+  margin:50px 0;
+}
+/*------------------------------------*/
+/*footer*/
+footer > .container{
+  padding:30px 10px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer span{margin-right:30px;}
+footer p a{
+  background-color:#ff9;
+}
+
+
+
 
 /*---------------PC 버전--------------------*/
 .pc-top-bar{
@@ -114,7 +433,7 @@ a{text-decoration: none; color: inherit;}
 
 /*4번째 요소 hover시 메뉴명이 바뀜*/
 .menu-1 > ul > li:nth-of-type(4) > a{
-  border: 1px solid black;  /*영역 확인용*/
+  /*border: 1px solid black;  영역 확인용*/
 }
 .menu-1 > ul > li:nth-of-type(4):hover > a:first-child{
   display: none;
@@ -135,7 +454,6 @@ section{
 .video{
   width: 100vw;
   height: 100%;
-  margin: 20px auto 0;
 }
 .video > video{
   width: 100%;
@@ -159,7 +477,7 @@ main > h2{
 }
 
 
-.nouveau-series{
+/* .nouveau-series{
   width: 100%;
   display: flex;
   justify-content: center;
@@ -170,11 +488,21 @@ main > h2{
   height: 100%;
   margin: 0 10px;
   cursor: pointer;
+} */
+
+
+#nouveau-series .swiper {padding: 0 10px; box-sizing: border-box; overflow: hidden;}
+.nouveauImg > img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
 }
 
 
+
 /*이미지요소*/
-.nouveauImg{
+/* .nouveauImg{
   width: 390px;
   height: 400px;
 }
@@ -182,7 +510,7 @@ main > h2{
   width: 100%;
   height: 100%;
   border-radius: 10px 10px 0 0;
-}
+} */
 .hoverImg{
   display: none;
 }
@@ -198,26 +526,32 @@ main > h2{
 
 /*텍스트요소*/
 .nouveauText{
-  width: 390px;
+  width: 100%;
   height: 90px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   background-color: #fff;
   border-radius: 0 0 10px 10px;
   text-align: center;
-  padding: 20px 0 10px;
+  padding: 18px 0 10px;
+  font-size: 16px;
+  color: #222;
 }
 .price{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
 }
-.price > strong{
+.price > .discount{
   color: #12cfca;
   font-weight: lighter;
   font-size: 16px;
-  margin-right: 2px;
+  margin-right: 15px;
 }
-.price > p{
-  font-size: 14px;
+.price > s{
+  font-size: 12px;
   color: #666;
 }
 /*---------- section : MD상품 -----------*/
@@ -236,7 +570,7 @@ main > h2{
 /* .swiper-slide {
   flex-shrink: 1;
 } */
- #mdProduct .swiper {padding: 0 10px; box-sizing: border-box; overflow: hidden; border: 1px solid red;}
+ #mdProduct .swiper {padding: 0 10px; box-sizing: border-box; overflow: hidden;}
 /*#mdProduct .swiper .swiper-wrapper{
   display: flex;
   flex-wrap: wrap;
@@ -254,12 +588,12 @@ main > h2{
 .mdImg{
  /*  width: 350px;
   height: 350px; */
- 
 }
 .mdImg > img{
   width: 100%;
   height: 100%;
   border-radius: 10px 10px 0 0;
+  cursor: pointer;
 }
 .hoverImg{
   display: none;
@@ -282,22 +616,20 @@ main > h2{
   border-radius: 0 0 10px 10px;
   text-align: center;
   padding: 15px 0 10px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  color: #222;
 }
 .price{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.price > strong{
-  color: #12cfca;
-  font-weight: lighter;
   font-size: 16px;
-  margin-right: 2px;
+  color: #333;
 }
-.price > p{
-  font-size: 14px;
-  color: #666;
-}
+
 /*---------- section : SNS -----------*/
 #sns{
   padding: 100px 0;
@@ -470,21 +802,25 @@ footer{
 /*---------------모바일 버전--------------------*/
 .mobile-top-bar{
   width: 100%;
+  background-color: #0bb0ab;
 }
 .mobile-top-bar a,
 .mobile-top-bar i{
-  color: #0bb0ab;
+  color: #fff;
 }
 
 /*상단 쿠폰안내 영역*/
 .mobile-top-bar__first-section{
   width: 100%;
   height: 31px;
-  background-color: #0bb0ab;
+  background-color: #ff8672;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 14px;
+}
+.mobile-top-bar__first-section > a > p{
+  color: #fff;
 }
 .mobile-top-bar__second-section{
   height: 50px;
@@ -517,26 +853,50 @@ footer{
     display: block;
   }
 
-  /*MD*/
-  #mdProduct .swiper {padding: 0 10px; box-sizing: border-box; overflow: hidden;}
-
-  .swiper-slide{
-    margin: 0 10px;
-    cursor: pointer;
+  /*누보시리즈*/
+  main{
+    height: 400px;
   }
-  /* .mdImg{
-    width: 500px;
-    height: 500px;
-  } */
-  .mdImg > img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px 10px 0 0;
+  main > h2{
+    font-size: 25px;
+  }
+  .nouveauText{
+    font-size: 13px;
+  }
+  .price > .discount{
+    font-size: 14px;
+  }
+  .price > s{
+    font-size: 10px;
+  }
+
+  /*MD*/
+  #mdProduct > h2{
+    font-size: 28px;
   }
   .mdText{
-    width: 500px;
+    font-size: 12px;
+  }
+  .price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
   }
 
+  /*sns*/
+  .snsText{
+    display: none;
+  }
+  .snsImgBox > img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    margin-left: 10px;
+  }
+
+  /*footer*/
   .footerTop > ul > li{
     font-size: 12px;
   }
@@ -545,7 +905,7 @@ footer{
     display: none;
   }
   .txt1 > p{
-    font-size: 12px;
+    font-size: 13px;
   }
   .txt1_sub{
     display: flex;
@@ -553,12 +913,12 @@ footer{
     margin-bottom: 5px;
   }
   .txt2 > p{
-    font-size: 10px;
+    font-size: 12px;
     color: rgb(247, 83, 83);
     margin: 25px 0;
   }
   .txt3 > p{
-    font-size: 10px;
+    font-size: 12px;
   }
 
 }

@@ -19,6 +19,24 @@
     <script src="js/beer.js" defer></script>
   </head>
   <body>
+
+    <div class="top">
+      <div class="topBtn1">
+        <a href="#top1">
+          <img src="image/Icon1.png" alt="Q&A">
+        </a>
+      </div>
+      <div class="topBtn2">
+        <a href="#top2">
+          <img src="image/Icon2.png" alt="공유아이콘">
+        </a>
+      </div>
+      <div class="topBtn3">
+        <a href="#top3">
+          <img src="image/Icon3.png" alt="top버튼">
+        </a>
+      </div>
+    </div>
     <!--Topbar 구현-->
     <div class="site-wrap">
       <div class="header-wrap">
@@ -93,7 +111,7 @@
           <div class="mobile-top-bar__second-section">
             <div class="flex-1 flex items-center">
               <a href="#" class="mobile-top-bar__logo">
-                <img src="image/logo.png" alt="모바일 로고" />
+                <img src="image/logo(white).png" alt="모바일 로고" />
               </a>
             </div>
             <div class="flex-1">
@@ -115,74 +133,79 @@
           </div>  
         </section>
 
-        <main>
-          <h2>맥주보다 맛있는 제주맥주 논알콘 누보시리즈</h2>
-          <div class="nouveau-series">
-            <div class="nouveauBox">
-              <div class="nouveauImg">
-                <img src="image/망고누보(x24)_1.webp" alt="망고누보" class="blockImg">
-                <img src="image/망고누보.jpg" alt="망고누보" class="hoverImg">
-              </div>
-              <div class="nouveauText">
-                <p>제목</p>
-                <div class="price">
-                  <strong>할인 가격표시</strong>
-                  <p>가격표시</p>
+        <main class="swiper-banner-box" id="nouveau-series">
+          <h2>맥주보다 맛있는 제주맥주 논알콜 누보시리즈</h2>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide-wrap">
+                <div class="nouveauImg">
+                  <img src="image/망고누보(x24)_1.webp" alt="망고누보" class="blockImg">
+                  <img src="image/망고누보.jpg" alt="망고누보" class="hoverImg">
+                </div>
+                <div class="nouveauText">
+                  <p>제주 누보 망고(24 cans)</p>
+                  <div class="price">
+                    <p class="discount">58,900원</p>
+                    <s>84,000원</s>
+                  </div>
                 </div>
               </div>
-            </div> <!--nouveauBox-->
-            <div class="nouveauBox">
-              <div class="nouveauImg">
-                <img src="image/망고누보(x12)_1.webp" alt="망고누보" class="blockImg">
-                <img src="image/망고누보.jpg" alt="망고누보" class="hoverImg">
-              </div>
-              <div class="nouveauText">
-                <p>제목</p>
-                <div class="price">
-                  <strong>할인 가격표시</strong>
-                  <p>가격표시</p>
+              <div class="swiper-slide swiper-slide-wrap">
+                <div class="nouveauImg">
+                  <img src="image/망고누보(x12)_1.webp" alt="망고누보" class="blockImg">
+                  <img src="image/망고누보.jpg" alt="망고누보" class="hoverImg">
+                </div>
+                <div class="nouveauText">
+                  <p>제주 누보 망고(12 cans)</p>
+                  <div class="price">
+                    <p class="discount">29,800원</p>
+                    <s>42,000원</s>
+                  </div>
                 </div>
               </div>
-            </div> <!--nouveauBox-->
-            <div class="nouveauBox">
-              <div class="nouveauImg">
-                <img src="image/망고누보(x6)_1.webp" alt="망고누보" class="blockImg">
-                <img src="image/망고누보.jpg" alt="망고누보" class="hoverImg">
-              </div>
-              <div class="nouveauText">
-                <p>제목</p>
-                <div class="price">
-                  <strong>할인 가격표시</strong>
-                  <p>가격표시</p>
+              <div class="swiper-slide swiper-slide-wrap">
+                <div class="nouveauImg">
+                  <img src="image/망고누보(x6)_1.webp" alt="망고누보" class="blockImg">
+                  <img src="image/망고누보.jpg" alt="망고누보" class="hoverImg">
+                </div>
+                <div class="nouveauText">
+                  <p>제주 누보 망고(6 cans)</p>
+                  <div class="price">
+                    <p class="discount">15,600원</p>
+                    <s>21,000원</s>
+                  </div>
                 </div>
               </div>
-            </div> <!--nouveauBox-->
-            <div class="nouveauBox">
-              <div class="nouveauImg">
-                <img src="image/제주누보(x6).webp" alt="망고누보">
-              </div>
-              <div class="nouveauText">
-                <p>제목</p>
-                <div class="price">
-                  <strong>할인 가격표시</strong>
-                  <p>가격표시</p>
+              <div class="swiper-slide swiper-slide-wrap">
+                <div class="nouveauImg">
+                  <img src="image/제주누보(x6).webp" alt="망고누보">
+                </div>
+                <div class="nouveauText">
+                  <p>제주 누보(6 cans)</p>
+                  <div class="price">
+                    <p class="discount">15,600원</p>
+                    <s>21,000원</s>
+                  </div>
                 </div>
               </div>
-            </div> <!--nouveauBox-->
-            <div class="nouveauBox">
-              <div class="nouveauImg">
-                <img src="image/제주누보(x12).webp" alt="망고누보">
-              </div>
-              <div class="nouveauText">
-                <p>제목</p>
-                <div class="price">
-                  <strong>할인 가격표시</strong>
-                  <p>가격표시</p>
+              <div class="swiper-slide swiper-slide-wrap">
+                <div class="nouveauImg">
+                  <img src="image/제주누보(x12).webp" alt="망고누보">
+                </div>
+                <div class="nouveauText">
+                  <p>제주 누보(12 cans)</p>
+                  <div class="price">
+                    <p class="discount">29,800원</p>
+                    <s>42,000원</s>
+                  </div>
                 </div>
               </div>
-            </div> <!--nouveauBox-->
-          </div> <!--nouveau-series-->
+            </div>
+          </div>
         </main>
+
+
+
         
         <section class="swiper-banner-box" id="mdProduct">
           <h2>MD</h2>
@@ -262,9 +285,9 @@
                   <img src="image/MD담요_2.jpg" alt="MD상품 김부각" class="hoverImg">
                 </div>
                 <div class="mdText">
-                  <p>제목</p>
+                  <p>제주누보 올레길 담요</p>
                   <div class="price">
-                    <p>10,500원</p>
+                    <p>14,000원</p>
                   </div>
                 </div>
               </div>
@@ -273,9 +296,9 @@
                   <img src="image/MD전용잔.webp" alt="망고누보" class="MD상품 맥주전용잔">
                 </div>
                 <div class="mdText">
-                  <p>제목</p>
+                  <p>제주맥주 전용잔 370mL</p>
                   <div class="price">
-                    <p>10,500원</p>
+                    <p>5,500원</p>
                   </div>
                 </div>
               </div>
@@ -284,9 +307,9 @@
                   <img src="image/MD코스터.webp" alt="망고누보" class="MD상품 코스터">
                 </div>
                 <div class="mdText">
-                  <p>제목</p>
+                  <p>제주맥주 앰블러 리버 코스터</p>
                   <div class="price">
-                    <p>10,500원</p>
+                    <p>5,900원</p>
                   </div>
                 </div>
               </div>
@@ -296,9 +319,9 @@
                   <img src="image/MD김부각_2.jpg" alt="MD상품 김부각" class="hoverImg">
                 </div>
                 <div class="mdText">
-                  <p>제목</p>
+                  <p>제주에서 만난 찹쌀 김부각</p>
                   <div class="price">
-                    <p>10,500원</p>
+                    <p>14,000원</p>
                   </div>
                 </div>
               </div>
@@ -307,9 +330,9 @@
                   <img src="image/MD화투.webp" alt="MD상품 화투">
                 </div>
                 <div class="mdText">
-                  <p>제목</p>
+                  <p>제주맥주 조약돌 화투</p>
                   <div class="price">
-                    <p>10,500원</p>
+                    <p>10,900원</p>
                   </div>
                 </div>
               </div>
