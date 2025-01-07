@@ -871,6 +871,9 @@ footer{
   }
 
   /*MD*/
+  #mdProduct{
+    padding-top: 0;
+  }
   #mdProduct > h2{
     font-size: 28px;
   }

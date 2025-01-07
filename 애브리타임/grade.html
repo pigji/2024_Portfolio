@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>성적 관리 시스템</title>
+  <link rel="stylesheet" href="css/grade.css">
+</head>
+<body>
+  <div class="container">
+    <h1>성적 관리 시스템</h1>
+
+    <!-- 학생 등록/수정 폼 -->
+    <form id="student-form">
+      <input type="text" id="name" placeholder="이름" required>
+      <input type="text" id="student-id" placeholder="학번" required>
+      <input type="number" id="math" placeholder="전공1 점수" required min="0" max="100">
+      <input type="number" id="english" placeholder="전공2 점수" required min="0" max="100">
+      <input type="number" id="science" placeholder="부전공 점수" required min="0" max="100">
+      <button type="submit">추가/수정</button>
+    </form>
+
+    <!-- 학생 목록 -->
+    <h2>학생 목록</h2>
+    <table id="student-table">
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>학번</th>
+          <th>전공1</th>
+          <th>전공2</th>
+          <th>부전공</th>
+          <th>작업</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 동적으로 추가될 내용 -->
+      </tbody>
+    </table>
+
+    <!-- 통계 -->
+    <h2>통계</h2>
+    <div id="statistics">
+      <p>전체 평균 점수: <span id="overall-average">0</span></p>
+    </div>
+  </div>
+
+  <script src="javascript/grade.js"></script>
+</body>
+</html>

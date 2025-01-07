@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애브리타임</title>
+  <link rel="stylesheet" href="css/main.css">
+  <!--폰트어썸 내 script 코드-->
+  <script src="https://kit.fontawesome.com/3223480a48.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <main>
+    <div class="container">
+      <div class="phone">
+        <div class="bar"></div>
+        <div class="phone-top">
+          <div class="phone-Icons">
+            <div class="IconMenu">
+              <div class="phone-IconCircle">
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+              </div>
+              <i class="fas fa-wifi"></i> 
+            </div>
+            <div class="dateTime"> 
+              <!--현재 시간(JS로 구현예정)-->
+              현재시간
+            </div>
+            <div class="phone-SubIcons">
+              <div class="subIcon">
+                <i class="fab fa-bluetooth-b"></i>
+                <i class="fas fa-battery-three-quarters"></i> 90%
+              </div>
+            </div>
+          </div>
+        </div> <!--phone-top : 상단-->
+        <div class="mainBtn">
+          <a href="/">HOME</a>
+        </div>
+        <div class="phone-content">
+
+
+          <!--게시판 : Tab메뉴 기능구현-->
+          <div class="noticeBox">
+            <div class="tab">
+              <div class="tab_menu">
+                <button class="on">전체</button>
+                <button>인기</button>
+                <button>익명</button>
+                <button>장터</button>
+              </div>
+              <div class="tab_list">
+                <div id="all" class="on"> <!--전체 게시판 내용-->
+                  <ul>
+                    <li><a href="#">전체 게시글</a></li>
+                    <li><a href="#">전체 게시글</a></li>
+                    <li><a href="#">전체 게시글</a></li>
+                  </ul>
+                </div>
+                <div id="best"> <!--인기 게시판 내용-->
+                  <ul>
+                    <li><a href="#">인기 게시글</a></li>
+                    <li><a href="#">인기 게시글</a></li>
+                    <li><a href="#">인기 게시글</a></li>
+                  </ul>
+                </div>
+                <div id="anonymity"> <!--익명 게시판 내용-->
+                  <ul>
+                    <li><a href="#">익명 게시글</a></li>
+                    <li><a href="#">익명 게시글</a></li>
+                    <li><a href="#">익명 게시글</a></li>
+                  </ul>
+                </div>
+                <div id="marketplace"> <!--장터 게시판 내용-->
+                  <ul>
+                    <li><a href="#">장터 게시글</a></li>
+                    <li><a href="#">장터 게시글</a></li>
+                    <li><a href="#">장터 게시글</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div> <!--noticeBox-->
+        </div>
+      </div> <!--phone-->
+    </div>
+  </main>
+
+  <script src="javascript/main.js"></script>
+</body>
+</html>

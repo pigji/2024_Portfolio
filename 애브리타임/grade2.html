@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대학교 시간표 관리</title>
+    <link rel="stylesheet" href="css/grade2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>대학교 시간표 관리</h1>
+
+      <!-- Time Table Form -->
+      <form id="timetable-form">
+        <input type="text" id="subject" placeholder="과목명" required />
+        <select id="day">
+          <option value="월">월</option>
+          <option value="화">화</option>
+          <option value="수">수</option>
+          <option value="목">목</option>
+          <option value="금">금</option>
+        </select>
+        <input type="time" id="time" required />
+        <button type="submit">시간표 등록</button>
+      </form>
+
+      <h2>시간표</h2>
+      <table id="timetable-table">
+        <thead>
+          <tr>
+            <th>과목명</th>
+            <th>요일</th>
+            <th>시간</th>
+            <th>작업</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div id="schedule-grid">
+        <h3>시간표 보기</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>시간</th>
+              <th>월</th>
+              <th>화</th>
+              <th>수</th>
+              <th>목</th>
+              <th>금</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>9:00-10:00</td>
+              <td id="m1"></td>
+              <td id="t1"></td>
+              <td id="w1"></td>
+              <td id="th1"></td>
+              <td id="f1"></td>
+            </tr>
+            <tr>
+              <td>10:00-11:00</td>
+              <td id="m2"></td>
+              <td id="t2"></td>
+              <td id="w2"></td>
+              <td id="th2"></td>
+              <td id="f2"></td>
+            </tr>
+            <tr>
+              <td>11:00-12:00</td>
+              <td id="m3"></td>
+              <td id="t3"></td>
+              <td id="w3"></td>
+              <td id="th3"></td>
+              <td id="f3"></td>
+            </tr>
+            <tr>
+              <td>12:00-1:00</td>
+              <td id="m4"></td>
+              <td id="t4"></td>
+              <td id="w4"></td>
+              <td id="th4"></td>
+              <td id="f4"></td>
+            </tr>
+            <tr>
+              <td>1:00-2:00</td>
+              <td id="m5"></td>
+              <td id="t5"></td>
+              <td id="w5"></td>
+              <td id="th5"></td>
+              <td id="f5"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="javascript/grade2.js"></script>
+  </body>
+</html>

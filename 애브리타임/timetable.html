@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시간표 관리</title>
+  <link rel="stylesheet" href="css/timetable.css">
+</head>
+<body>
+  <div class="container">
+    <h1>시간표 관리 시스템</h1>
+
+    <!-- 시간표 등록 폼 -->
+    <form id="timetable-form">
+      <input type="text" id="subject" placeholder="과목명" required>
+      <select id="day" required>
+        <option value="">요일 선택</option>
+        <option value="월요일">월요일</option>
+        <option value="화요일">화요일</option>
+        <option value="수요일">수요일</option>
+        <option value="목요일">목요일</option>
+        <option value="금요일">금요일</option>
+      </select>
+      <input type="time" id="time" required>
+      <button type="submit">추가/수정</button>
+    </form>
+
+    <!-- 시간표 목록 -->
+    <h2>등록된 시간표</h2>
+    <table id="timetable-table">
+      <thead>
+        <tr>
+          <th>과목명</th>
+          <th>요일</th>
+          <th>시간</th>
+          <th>작업</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 동적으로 추가될 내용 -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="javascript/timetable.js"></script>
+</body>
+</html>
