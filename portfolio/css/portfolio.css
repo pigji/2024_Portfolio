@@ -9,7 +9,7 @@ ul, li{list-style: none;}
 i, li{cursor: pointer;}
 
 a{text-decoration: none; color: inherit;}
-body{margin: 0 auto; min-width: 1000px;}
+body{margin: 0 auto; min-width: 1000px; color: #333;}
 html {scroll-behavior: smooth;}
 /*-----------------------------------------------*/
 /*공통속성 : container*/
@@ -17,7 +17,6 @@ html {scroll-behavior: smooth;}
   width: 1400px;
   height: 100%;
   margin: 0 auto;
-  border: 3px solid pink;
 }
 header{
   width: 100%;
@@ -28,7 +27,11 @@ header{
 section{
   width: 100%;
   height: 100vh;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
+}
+h2{
+  text-align: center;
+  font-size: 50px;
 }
 /*-----------------------------------------------*/
 /*fixed되는 상단 nav 메뉴*/
@@ -44,7 +47,7 @@ section{
   align-items: center;
   margin: 0 auto;
   background-color: #fff;
-  border: 1px solid red;  /*영역 확인용*/
+  border-bottom: 1px solid #ccc;
 }
 .navTit > p{
   font-size: 40px;
@@ -59,7 +62,6 @@ section{
   margin: 0 25px;
   box-sizing: border-box;
   font-weight: bold;
-  color: #333;
 }
 /*-----------------------------------------------*/
 /*section : home*/
@@ -107,10 +109,6 @@ section{
 .proflieContent{
   padding: 100px 0 60px;
 }
-.proflieContent > h2{
-  text-align: center;
-  font-size: 40px;
-}
 .proflieBox{
   display: flex;
   justify-content: flex-start;
@@ -149,19 +147,13 @@ section{
 .otherBox{
   margin-bottom: 30px;
 }
-.otherBox:nth-of-type(1) .other{
-  border: 1px solid red;  /*영역 확인용*/
-}
-.otherBox:nth-of-type(2) .other{
-  border: 1px solid red;  /*영역 확인용*/
-}
+
+
 .otherBox:nth-of-type(1) .other > .other-element:nth-of-type(1){
-  border: 2px solid yellow; /*영역 확인용*/
   width: 300px;
   margin-right: 90px;
 }
 .otherBox:nth-of-type(2) .other > .other-element:nth-of-type(1){
-  border: 2px solid yellow; /*영역 확인용*/
   width: 300px;
   margin-right: 90px;
 }
@@ -178,31 +170,73 @@ section{
 }
 /*-----------------------------------------------*/
 /*section : skill*/
+#skill{
+  width: 100%;
+  height: 100%;
+  padding: 150px 0;
+  background-color: #fff;
+}
 .skillContent{
-  padding: 150px 0 60px;
 }
-.skillContent > h2{
-  text-align: center;
-  font-size: 40px;
+
+.skillBox{
+  padding: 10px 15px;
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
 }
+.skillBox > ul{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.skillBox > ul > li{
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 20px 15px;
+  width: 420px;
+  height: 120px;
+  transition: 0.7s;
+}
+.skillBox > ul > li:hover{
+  transform: scale(1.1);
+}
+
+.imgTxt{
+  display: flex;
+  align-items: center;
+}
+/*이미지요소*/
+.imgTxt > img{
+  width: 45px;
+  height: 45px;
+  margin-right: 5px;
+}
+
+
+
+
 /*-----------------------------------------------*/
 /*section : portpolio*/
+#portpolio{
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+}
 .portpolioContent{
   padding: 150px 0 60px;
 }
-.portpolioContent > h2{
-  text-align: center;
-  font-size: 40px;
-}
 /*-----------------------------------------------*/
 /*section : contace*/
+#contact{
+  width: 100%;
+  height: 100%;
+}
 #portpolio{height: 100%;}
 .contactContent{
   padding: 150px 0;
-}
-.contactContent > h2{
-  text-align: center;
-  font-size: 40px;
 }
 
 /*포트포리오 소개 영역*/
@@ -240,42 +274,42 @@ section{
   filter: grayscale(0);
 }
 
-.Img1{background: url(../images/project-img/웹페이지\ 구현1.png) center/cover;}
-.Img2{background: url(../images/project-img/프로필카드.png) center/cover;}
-.Img3{background: url(../images/animation-img/Representative-img.PNG) center/cover;}
-.Img4{background: url(../images/project-img/파노라마.png) center/cover;}
-.Img5{background: url(../images/project-img/메가박스.png) center/cover;}
-.Img6{background: url(../images/project-img/반응형웹갤러리.png) center/cover;}
-.Img7{background: url(../images/project-img/뮤직플레이어.png) center/cover;}
-.Img8{background: url(../images/project-img/동영상웹페이지.png) center/cover;}
-.Img9{background: url(../images/project-img/swiperAPI.png) center/cover;}
-.Img10{background: url(../images/project-img/3D스크롤.png) center/cover;}
-.Img11{background: url(../images/project-img/반응형웹페이지.png) center/cover;}
-.Img12{background: url(../images/project-img/슈팅게임구현.png) center/cover;}
-.Img13{background: url(../images/project-img/강아지똥피하기.png) center/cover;}
-.Img14{background: url(../images/project-img/에어팟.png) center/cover;}
-.Img15{background: url(../images/project-img/벤츠\(자동차\).png) center/cover;}
-.Img16{background: url(../images/project-img/계산기.png) center/cover;}
-.Img17{background: url(../images/project-img/서울대학교병원.png) center/cover;}
-.Img18{background: url(../images/project-img/포트폴리오.png) center/cover;}
-.Img19{background: url(../images/project-img/디자인호텔\ \(1\).png) center/cover;}
-.Img20{background: url(../images/project-img/tmdb.png) center/cover;}
-.Img21{background: url(../images/project-img/굿모닝여행사\ \(1\).png) center/cover;}
-.Img22{background: url(../images/project-img/todolist.png) center/cover;}
-.Img23{background: url(../images/) center/cover;}
+.Img1{background: url(../images/project-img/웹페이지\ 구현1.png) center/cover;}           /*웹페이지구현*/
+.Img2{background: url(../images/project-img/프로필카드.png) center/cover;}                /*프로필카드*/
+.Img3{background: url(../images/animation-img/Representative-img.PNG) center/cover;}      /*마을 애니메이션*/
+.Img4{background: url(../images/project-img/파노라마.png) center/cover;}                  /*파노라마*/
+.Img5{background: url(../images/project-img/메가박스.png) center/cover;}                  /*메가박스*/
+.Img6{background: url(../images/project-img/반응형웹갤러리.png) center/cover;}            /*반응형 웹갤러리*/
+.Img7{background: url(../images/project-img/3D스크롤.png) center/cover;}                  /*3D스크롤*/
+.Img8{background: url(../images/project-img/반응형웹페이지.png) center/cover;}            /*반응형웹페이지*/
+.Img9{background: url(../images/project-img/동영상웹페이지.png) center/cover;}            /*동영상웹페이지*/
+.Img10{background: url(../images/project-img/swiperAPI.png) center/cover;}                /*Swiper*/
+.Img11{background: url(../images/project-img/강아지똥피하기.png) center/cover;}           /*강아지 똥 피하기*/
+.Img12{background: url(../images/project-img/슈팅게임구현.png) center/cover;}             /*슈팅게임*/
+.Img13{background: url(../images/project-img/뮤직플레이어.png) center/cover;}             /*뮤직플레이어*/
+.Img14{background: url(../images/project-img/에어팟.png) center/cover;}                   /*에어팟*/
+.Img15{background: url(../images/project-img/벤츠\(자동차\).png) center/cover;}           /*벤츠*/
+.Img16{background: url(../images/project-img/서울대학교병원.png) center/cover;}           /*서울대학교병원 리뉴얼*/
+.Img17{background: url(../images/project-img/계산기.png) center/cover;}                   /*계산기*/
+.Img18{background: url(../images/project-img/디자인호텔스.png) center/cover;}             /*디자인호텔스*/
+.Img19{background: url(../images/project-img/포트폴리오.png) center/cover;}               /*포트폴리오 프로젝트*/
+.Img20{background: url(../images/project-img/tmdb.png) center/cover;}                     /*TMDB*/
+.Img21{background: url(../images/project-img/굿모닝여행사\ \(1\).png) center/cover;}      /*굿모닝여행사*/
+.Img22{background: url(../images/project-img/todolist.png) center/cover;}                 /*ToDo리스트*/
+.Img23{background: url(../images/project-img/제주맥주\(1\).png) center/cover;}            /*제주맥주*/
+.Img24{background: url(../images/project-img/petshop.png) center/cover;}                      /*펫샵*/
 
 
 /*텍스트 요소*/
 .pp-txt{
-  margin-top: 25px;
+  margin-top: 15px;
 }
 .pp-title{
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .pp-attribute{
-  border: 1px solid red;
   margin: 10px 0;
 }
 .pp-attribute li{
@@ -328,8 +362,15 @@ section{
   margin: 5px 15px;
   line-height: 42px;
   border-radius: 5px;
-  border: 1px solid red;
+  border: 1px solid #ccc;
   box-shadow: 5px 5px #ccc;
+  transition: 0.3s;
+}
+.pp-btn > a:hover{
+  background-color: #333;
+  color: #fff;
+  box-shadow: 5px 5px #888;
+  font-weight: bold;
 }
 
 /*-----------------------------------------------*/
@@ -347,7 +388,6 @@ section{
 }
 .contact > p{
   margin: 20px 0;
-  color: #333;
   font-size: 17px;
 }
 .contact > .tit{
@@ -367,7 +407,6 @@ section{
   margin: 0 auto;
 }
 .myInformation > .emailTxt{
-  color: #333;
   font-size: 17px;
   margin: 10px 0;
 }
@@ -377,7 +416,6 @@ section{
 }
 .myInformation > .link > a{
   margin: 50px 30px;
-  color: #333;
   padding-bottom: 5px;
 }
 .myInformation > .link > a:hover{

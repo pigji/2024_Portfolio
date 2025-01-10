@@ -16,3 +16,5 @@ tabMenus.forEach((tabMenu, idx) => tabMenu.addEventListener("click", () => {
   //클릭한 버튼과 같은 순번의 리스트요소에 on클래스를 추가
   tabLists[idx].classList.add("on");
 }))
+
+
